@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/31/%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/04/%E5%B8%83%E9%9B%B7%E6%96%AF%E6%82%96%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -211,98 +211,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/31/%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">网络连接的几种模式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-31 10:54:33 / 修改时间：11:01:57" itemprop="dateCreated datePublished" datetime="2022-10-31T10:54:33+08:00">2022-10-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-           <span id="more"></span>
-
-
-<h2 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h2><p><img src="https://img-blog.csdnimg.cn/d28a9d2b8acc434c9921268f8b55c585.jpeg" alt="请添加图片描述"></p>
-<p>在此模式下，虚拟机就像是独立的主机，和真实的物理主机是一样的地位，可以通过虚拟机所在的物理主机访问外网，外网中的其他主机也可以访问此虚拟机。虚拟机与外网主机通讯需要满足以下条件：</p>
-<p>虚拟机所创建保存的物理主机与其他主机在同一局域网下<br>为虚拟机设置一个与创建该虚拟机的主机的物理网卡在同一网段的IP<br>虚拟机与创建该虚拟机的物理主机设置为桥接模式<br>下面针对以上三个条件进行详解：</p>
-<p>​ 条件1只需满足几台电脑连接在同一局域网即可；</p>
-<p>​ 条件2需要设置虚拟机和物理主机的网络在同一网段下，具体设置方法如下（以VM软件为例）：</p>
-<p>1、在VW的编辑菜单中选择虚拟网络编辑器，并将VMnet信息中的模式选为桥接模式。若物理主机使用的无线网卡连接局域网，则同样需要在VM中设置为桥接至无线网卡；同理桥接至有线网卡。设置好点击确定即可。</p>
-<p>​2、设置好桥接模式之后，由于模式的改变，需要在Linux终端中重启网络连接，否则无法实现通讯。重启网络连接的命令行为：</p>
-<p>systemctl restart network<br>​3、网络重启之后，在物理主机的系统上（默认为Win）查看当前正在使用的网卡的IP地址，如下图所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/4c0fedfc08cc40c4ad4acef4c73a86fe.jpeg" alt="请添加图片描述"></p>
-<p>​4、最后在Linux终端上修改虚拟机的IP，为保证虚拟机IP与物理主机的IP在同一网段，需要保证IP地址的前三位是相同，最后一位在符合定义的情况下随意设置即可。命令行操作为：</p>
-<p>ifconfig ens33 10.141.117.12&#x2F;24<br>其中，ens33为虚拟机的网卡，&#x2F;24表示子网掩码</p>
-<p>至此，在桥接模式下即可实现虚拟机与其他物理主机的通讯，通讯命令为：ping 其他物理主机的IP地址</p>
-<p>ping 10.141.117.22<br>2、仅主机模式<br><img src="https://img-blog.csdnimg.cn/3b563f53fd8e4294bdb3c28b4d4fc392.jpeg" alt="请添加图片描述"></p>
-<p>仅主机模式表示的是物理主机与物理主机之间用同一局域网连接，虚拟机则是采用的虚拟网络连接，它与物理网络是隔开的，所以此模式下虚拟机与别的物理主机无法实现通信。一般在安装VM之后，软件会自动添加VMnet1和VMnet8两块虚拟网卡。也就是说，仅主机模式下，只能实现虚拟机和创建虚拟机的物理主机之间的通讯。该模式通讯需满足的条件为</p>
-<p>虚拟机的IP和物理主机的VMnet1网卡的IP在同一网段内<br>下面针对该条件进行详解：</p>
-<p>​ 1.在VM中设置虚拟网络模式为仅主机模式，然后重启虚拟机的网络</p>
-<p>​ 2.在Win中找到VMnet1的IP地址，然后在虚拟机中设置为同一网段即可</p>
-<p>​ 3.最后ping 物理主机IP地址</p>
-<p>3、NAT模式（网络地址转换模式）<br>​NAT模式对应的虚拟网络为VMnet8，这是一个独立的网络。此模式下物理主机就像是一台支持NAT功能的代理服务器，虚拟机就像是NAT的客户端一样。虚拟机可以使用物理主机的IP地址访问互联网，但由于NAT技术的特点，外部网络中的主机无法主动与NAT模式下的虚拟机进行通讯。也就是说，只能是由虚拟机到外部网络计算机的单向通信。物理主机与NAT模式下的虚拟机是可以互通的，前提是要虚拟机的IP与VMnet8的网卡IP在同一网段内。</p>
-<p>此模式的结构图与仅主机模式结构图一样。</p>
-<p>主机与NAT模式下的虚拟机是可以互通的，前提是要虚拟机的IP与VMnet8的网卡IP在同一网段内。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/30/%E8%B5%B5%E4%B9%9D%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/30/%E8%B5%B5%E4%B9%9D%E7%AB%A0/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2022/11/04/%E5%B8%83%E9%9B%B7%E6%96%AF%E6%82%96%E8%AE%BA/" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta">
@@ -312,7 +221,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-10-30 23:12:13" itemprop="dateCreated datePublished" datetime="2022-10-30T23:12:13+08:00">2022-10-30</time>
+              <time title="创建时间：2022-11-04 23:13:14" itemprop="dateCreated datePublished" datetime="2022-11-04T23:13:14+08:00">2022-11-04</time>
             </span>
 
           
@@ -345,7 +254,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/30/%E4%B8%A4%E5%BC%B9%E4%B8%80%E6%98%9F%E7%B2%BE%E7%A5%9E%E5%8F%8A%E5%85%83%E5%8B%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/04/%E7%89%A9%E7%90%86%E5%AD%A6%E5%9B%9B%E5%A4%A7%E7%A5%9E%E5%85%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -359,7 +268,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/30/%E4%B8%A4%E5%BC%B9%E4%B8%80%E6%98%9F%E7%B2%BE%E7%A5%9E%E5%8F%8A%E5%85%83%E5%8B%8B/" class="post-title-link" itemprop="url">两弹一星精神及元勋</a>
+            <a href="/2022/11/04/%E7%89%A9%E7%90%86%E5%AD%A6%E5%9B%9B%E5%A4%A7%E7%A5%9E%E5%85%BD/" class="post-title-link" itemprop="url">物理学四大神兽</a>
         </h2>
 
         <div class="post-meta">
@@ -370,7 +279,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-10-30 23:06:41 / 修改时间：23:12:03" itemprop="dateCreated datePublished" datetime="2022-10-30T23:06:41+08:00">2022-10-30</time>
+              <time title="创建时间：2022-11-04 23:11:17 / 修改时间：23:14:30" itemprop="dateCreated datePublished" datetime="2022-11-04T23:11:17+08:00">2022-11-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -393,84 +302,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>“两弹”，一个是核弹，核弹包括原子弹和氢弹，还有一个是导弹。“一星”就是人造卫星。1999年9月18日，江泽民同志在表彰为研制“两弹一星”作出突出贡献的科技专家大会上发表讲话，将“两弹一星精神”概括为“热爱祖国、无私奉献，自力更生、艰苦奋斗，大力协同、勇于登攀”二十四个字。<br>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/30/%E4%B8%A4%E5%BC%B9%E4%B8%80%E6%98%9F%E7%B2%BE%E7%A5%9E%E5%8F%8A%E5%85%83%E5%8B%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/30/%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7%E7%9A%84%E8%BD%A6%E8%BD%AE%E6%82%96%E8%AE%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/30/%E4%BA%9A%E9%87%8C%E5%A3%AB%E5%A4%9A%E5%BE%B7%E7%9A%84%E8%BD%A6%E8%BD%AE%E6%82%96%E8%AE%BA/" class="post-title-link" itemprop="url">亚里士多德的车轮悖论</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-30 23:04:12 / 修改时间：23:04:14" itemprop="dateCreated datePublished" datetime="2022-10-30T23:04:12+08:00">2022-10-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%80%E5%A0%86%E6%9D%82%E4%B9%B1%E7%9A%84%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">一堆杂乱的常识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-           <span id="more"></span>
-
-<p>很有意思，请参考<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ccnt_2012/article/details/103506778?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166714218216782427438410%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=166714218216782427438410&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-103506778-null-null.142%5Ev62%5Epc_search_tree,201%5Ev3%5Econtrol_2,213%5Ev1%5Econtrol&amp;utm_term=%E8%BD%A6%E8%BD%AE%E6%82%96%E8%AE%BA&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/ccnt_2012/article/details/103506778?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166714218216782427438410%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=166714218216782427438410&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-103506778-null-null.142^v62^pc_search_tree,201^v3^control_2,213^v1^control&amp;utm_term=%E8%BD%A6%E8%BD%AE%E6%82%96%E8%AE%BA&amp;spm=1018.2226.3001.4187</a></p>
+          <h2 id="芝诺的乌龟"><a href="#芝诺的乌龟" class="headerlink" title="芝诺的乌龟"></a>芝诺的乌龟</h2><p>在答案揭晓之前，我们先来了解一下芝诺悖论，芝诺是古希腊著名的数学家和哲学家，他为了支持运动的不可分割性，提出了一系列的哲学悖论，他提出了四十多条悖论，后人统称为芝诺悖论，在芝诺悖论里，你将永远无法超越乌龟，为什么这样说呢？当乌龟跑了100米时，你却还没有出发，如果你跑完这100米的时候，乌龟可能又前进了10米，于是新的起点就产生了，只要乌龟一直向前爬，新的起点就会无限循环，而你也只能无限接近乌龟，但却无法超越它，这就是令人头大的芝诺乌龟，这也被后人称为物理学四大神兽之一。</p>
+<h2 id="拉普拉斯兽"><a href="#拉普拉斯兽" class="headerlink" title="拉普拉斯兽"></a>拉普拉斯兽</h2><p>拉普拉斯兽，无所不能，能预见未来，只要拉普拉斯兽知道宇宙中每个原子的位置和动量，都能利用牛顿定律瞬间预测出过去和未来，那么世界就成为了一台精密仪器，一直都在运行，宇宙中每个星球，每个粒子，以及所有的东西，都是这个机器上的一部分，我们从出生开始，都是提前计划好，没有任何悬念，然而在很多物理大佬刁难下，拉普拉斯兽倒在了热力学和量子力学脚下，仅仅统治了西方科学100年的时间，而芝诺乌龟统治时间2000年相比而言，可以说是最可怜的四大神兽了。</p>
+<h2 id="薛定谔的猫"><a href="#薛定谔的猫" class="headerlink" title="薛定谔的猫"></a>薛定谔的猫</h2><p>将一只猫关在装有少量镭和氰化物的密闭容器里。镭的衰变存在几率，如果镭发生衰变，会触发机关打碎装有氰化物的瓶子，猫就会死；如果镭不发生衰变，猫就存活。根据量子力学理论，由于放射性的镭处于衰变和没有衰变两种状态的叠加，猫就理应处于死猫和活猫的叠加状态，这只既死又活的猫就是所谓的“薛定谔猫”。</p>
+<h2 id="麦克斯韦妖"><a href="#麦克斯韦妖" class="headerlink" title="麦克斯韦妖"></a>麦克斯韦妖</h2><p>假如有一个隔热容器，里面有自由移动的分子，忽然容器里出现了一个隔板，将容器分成了两个相等的空间，隔板上有道门，门上有只守门妖，他只遵守一条命令，将速度低的分子移到左边房间，速度高的分子移到右边房间，这样活动慢的分子和移动块的分子就只能隔板相望，容器就分为低温和高温一侧，麦克斯韦设想的妖怪非常小，门非常轻，所以做工就可以忽略不计，那么久出现问题了，麦克斯韦妖在不做功的情况下实现了热量的逆流，当然不可能，那么这个问题出在哪里呢？科学家认为，这个小妖不可能凭空确认分子运动快慢，他需要一个观察和发现的过程，而这个过程是需要消耗能量的，当妖在处理这些信息时，会熵增，这远远超过分粒子的熵减，所以麦克斯韦妖并不违反热力学第二定律。</p>
 
       
     </div>
@@ -490,7 +325,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/30/%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%9A%84%E6%95%B0%E5%AD%97%E6%84%8F%E4%B9%89/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/02/%E6%97%A5%E8%AE%B02022-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -504,217 +339,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/10/30/%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%9A%84%E6%95%B0%E5%AD%97%E6%84%8F%E4%B9%89/" class="post-title-link" itemprop="url">身份证号的数字含义</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-30 22:59:36 / 修改时间：23:01:30" itemprop="dateCreated datePublished" datetime="2022-10-30T22:59:36+08:00">2022-10-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%80%E5%A0%86%E6%9D%82%E4%B9%B1%E7%9A%84%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">一堆杂乱的常识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>倒数第二位区分性别，单数是男生双数是女生<br>前两位数是省份信息，13便是河北45是广西43是湖南</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/30/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/30/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Hadoop大数据学习中的基本操作</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-30 22:54:30 / 修改时间：22:56:26" itemprop="dateCreated datePublished" datetime="2022-10-30T22:54:30+08:00">2022-10-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">大数据学习之路</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>参考黑马Hadoop网课</p>
-<h2 id="Hadoop集群的一键启停"><a href="#Hadoop集群的一键启停" class="headerlink" title="Hadoop集群的一键启停"></a>Hadoop集群的一键启停</h2><h4 id="HDFS集群"><a href="#HDFS集群" class="headerlink" title="HDFS集群"></a>HDFS集群</h4><p>start-dfs.sh<br>stop-dfs.sh </p>
-<h4 id="YARN集群"><a href="#YARN集群" class="headerlink" title="YARN集群"></a>YARN集群</h4><p>start-yarn.sh<br>stop-yarn.sh</p>
-<h4 id="Hadoop集群"><a href="#Hadoop集群" class="headerlink" title="Hadoop集群"></a>Hadoop集群</h4><p>start-all.sh<br>stop-all.sh</p>
-<h2 id="hive的启动"><a href="#hive的启动" class="headerlink" title="hive的启动"></a>hive的启动</h2><p>若要使用HIve编写大数据程序（直接在Linux，不是DG上）<br>首先启动Hadoop集群<br>然后后台启动Metastore<br>命令为nohup &#x2F;export&#x2F;server&#x2F;apache-hive-3.1.2-bin&#x2F;bin&#x2F;hive –service metastore &amp;<br>利用jps＋kill -9 进程号关闭<br>然后启动hiveserver2服务<br>命令为nohup &#x2F;export&#x2F;servers&#x2F;hive&#x2F;bin&#x2F;hive –service hiveserver2 &amp;<br>就可以写SQL了<br><img src="https://img-blog.csdnimg.cn/a5d59f964d2f4e2790aa2ba6a50e4057.jpeg"></p>
-<h2 id="一些基础Linux命令"><a href="#一些基础Linux命令" class="headerlink" title="一些基础Linux命令"></a>一些基础Linux命令</h2><p>ll<br>ls<br>kill<br>jps</p>
-<h2 id="Hadoop集群启动后"><a href="#Hadoop集群启动后" class="headerlink" title="Hadoop集群启动后"></a>Hadoop集群启动后</h2><p><a href="http://namenode_host:9870访问HDFS文件系统网站">http://namenode_host:9870访问HDFS文件系统网站</a><br><a href="http://resourcemanager_host:8088访问yarn集群网站">http://resourcemanager_host:8088访问yarn集群网站</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/29/%E9%87%8C%E6%8B%89%E6%96%9C%E5%A1%94%E4%B8%8D%E5%80%92%E4%B9%8B%E5%A5%A5%E7%A7%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/29/%E9%87%8C%E6%8B%89%E6%96%9C%E5%A1%94%E4%B8%8D%E5%80%92%E4%B9%8B%E5%A5%A5%E7%A7%98/" class="post-title-link" itemprop="url">里拉斜塔不倒之奥秘</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-29 19:18:48 / 修改时间：19:48:58" itemprop="dateCreated datePublished" datetime="2022-10-29T19:18:48+08:00">2022-10-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%80%E5%A0%86%E6%9D%82%E4%B9%B1%E7%9A%84%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">一堆杂乱的常识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://img-blog.csdnimg.cn/2ae654d1bc8f4ea2ba00dcbb429050bd.png" alt="在这里插入图片描述">第n块木板可以生出长度为L&#x2F;2n，n层可以生出的最大长度为L&#x2F;2 + L&#x2F;4 + ……+ L&#x2F;2n，为调和级数。<br>由于调和级数不收敛，所以木板可以生出无限长。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/" class="post-title-link" itemprop="url">未命名</a>
+            <a href="/2022/11/02/%E6%97%A5%E8%AE%B02022-11/" class="post-title-link" itemprop="url">日记2022-11</a>
         </h2>
 
         <div class="post-meta">
@@ -724,135 +349,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-10-28 15:41:35" itemprop="dateCreated datePublished" datetime="2022-10-28T15:41:35+08:00">2022-10-28</time>
+              <time title="创建时间：2022-11-02 23:10:34" itemprop="dateCreated datePublished" datetime="2022-11-02T23:10:34+08:00">2022-11-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-29 19:28:50" itemprop="dateModified" datetime="2022-10-29T19:28:50+08:00">2022-10-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/28/%E9%A9%AC%E6%96%AF%E5%85%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/28/%E9%A9%AC%E6%96%AF%E5%85%8B/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-10-28 15:41:25" itemprop="dateCreated datePublished" datetime="2022-10-28T15:41:25+08:00">2022-10-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/27/%E9%82%A3%E4%BA%9B%E7%A7%B0%E4%BD%9C%E9%A6%96%E5%B8%AD%E7%9A%84%E5%85%AC%E5%8F%B8%E8%81%8C%E4%BD%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="小田同学">
-      <meta itemprop="description" content="自强不息，厚德载物">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小岛">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/27/%E9%82%A3%E4%BA%9B%E7%A7%B0%E4%BD%9C%E9%A6%96%E5%B8%AD%E7%9A%84%E5%85%AC%E5%8F%B8%E8%81%8C%E4%BD%8D/" class="post-title-link" itemprop="url">那些称作首席的公司职位</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-10-27 23:15:25" itemprop="dateCreated datePublished" datetime="2022-10-27T23:15:25+08:00">2022-10-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-29 19:28:53" itemprop="dateModified" datetime="2022-10-29T19:28:53+08:00">2022-10-29</time>
+                <time title="修改时间：2022-11-04 23:19:54" itemprop="dateModified" datetime="2022-11-04T23:19:54+08:00">2022-11-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -877,8 +381,457 @@
       
            <span id="more"></span>
 
-<p>CEO 首席执行官<br>CFO 首席财务官<br>CIO 首席信息官<br>COO 首席运营官<br>CTO 首席技术官<br>CHO 首席人才官<br>CMO 首席营销官<br>CPO 首席制造官<br>CCO 首席文化官<br>CSO 首席安全官<br>CKO 首席知识官</p>
 
+<h2 id="11月2日，南宁，23点11，实训楼"><a href="#11月2日，南宁，23点11，实训楼" class="headerlink" title="11月2日，南宁，23点11，实训楼"></a>11月2日，南宁，23点11，实训楼</h2><p>写完这个就回宿舍洗澡去。其实写写日记也挺有意思的，说不定以后看到这个的时候会很有感触。<br>我是不是也可以做一个专门记录做了什么工作的日志呢?很久之前就有这个想法了，一直没有去付之于实践。<br>emm，我两天让一梦无语了两次。我忽然反应到，我对她的态度和对别人还是不一样，我把我的温柔与娇气都给了她，我像个不成熟的孩子一样（明我在别人面前是说一不二的老大角色，怎么对她是这样了呢…不服ing），不仅是对她，以后所作所为，不应该浮躁，我要成熟。<br>我否认不了，我就是很喜欢一梦，没办法做到平常心，像看待普通朋友一样看她，我好怕再次和她远离。<br>真的好奇怪啊，可我没有放弃真的很大程度上是因为，我想做个专一的人。我很想和她说，一遍一遍说，一梦我想你了。可她已经烦我了，我好烦啊，我都已经坚持这么久了，难道真的从一开始就注定不能在一起吗。我也想像其他男生对女朋友一样，把自己的呵护都给她。我也不会把她照顾得很没头脑，姑娘本来就是个很独立的人，这很好，我支持。我想和她一起努力，做喜欢的事<br>瞎想，我感觉是没可能。但我越想很难受，我不服命运啊，我不会离开她的。<br>这段时间我不找她了，我怕她烦我。</p>
+<p>与自己和解之后，我想做的事情还是没有做到，但是这不失为一种正确的想法。<br>我想做李小文，李叔同那样的人，不管社会什么样，以后尽力兼济天下。</p>
+<h2 id="11月4日，南宁，11点，实训楼"><a href="#11月4日，南宁，11点，实训楼" class="headerlink" title="11月4日，南宁，11点，实训楼"></a>11月4日，南宁，11点，实训楼</h2><p>今天，看了几节的操作系统网课，看了会relation network代码（还没看懂），做了两篇英语阅读16</p>
+<p>效率低下的原因很大程度是因为老玩，所以，学习别聊天，学习一定要锁机。<br>英语阅读现在读的很快了，十分多就能看完一篇但是正确率真的差强人意。必须要把所有选项都看完，我得想办法提升一下正确率了。<br>累</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/02/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/02/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3/" class="post-title-link" itemprop="url">哥德巴赫猜想</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-11-02 23:03:51 / 修改时间：23:09:12" itemprop="dateCreated datePublished" datetime="2022-11-02T23:03:51+08:00">2022-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%A0%86%E6%9D%82%E4%B9%B1%E7%9A%84%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">一堆杂乱的常识</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>又被称为1＋1的证明</p>
+<p>哥德巴赫1742年在给欧拉的信中提出了以下猜想：任一大于2的整数都可写成三个质数之和。但是哥德巴赫自己无法证明它，于是就写信请教赫赫有名的大数学家欧拉帮忙证明，但是一直到死，欧拉也无法证明。因现今数学界已经不使用“1也是素数”这个约定，原初猜想的现代陈述为：任一大于5的整数都可写成三个质数之和。（n&gt;5：当n为偶数，n&#x3D;2+(n-2)，n-2也是偶数，可以分解为两个质数的和；当n为奇数，n&#x3D;3+(n-3)，n-3也是偶数，可以分解为两个质数的和）欧拉在回信中也提出另一等价版本，即任一大于2的偶数都可写成两个质数之和。常见的猜想陈述为欧拉的版本。把命题”任一充分大的偶数都可以表示成为一个素因子个数不超过a个的数与另一个素因子不超过b个的数之和”记作”a+b”。1966年陈景润证明了”1+2”成立，即”任一充分大的偶数都可以表示成二个素数的和，或是一个素数和一个半素数的和”。<br>常见的猜想陈述为欧拉的版本，即任一大于2的偶数都可写成两个素数之和，亦称为“强哥德巴赫猜想”或“关于偶数的哥德巴赫猜想”。<br>从关于偶数的哥德巴赫猜想，可推出：任何一个大于7的奇数都能被表示成三个奇质数的和。后者称为“弱哥德巴赫猜想”或“关于奇数的哥德巴赫猜想”。若关于偶数的哥德巴赫猜想是对的，则关于奇数的哥德巴赫猜想也会是对的。2013年5月，巴黎高等师范学院研究员哈洛德·贺欧夫各特发表了两篇论文，宣布彻底证明了弱哥德巴赫猜想。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/02/%E7%BA%A2%E8%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/02/%E7%BA%A2%E8%AD%A6/" class="post-title-link" itemprop="url">红警</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-11-02 22:53:29 / 修改时间：23:03:36" itemprop="dateCreated datePublished" datetime="2022-11-02T22:53:29+08:00">2022-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%80%E5%A0%86%E6%9D%82%E4%B9%B1%E7%9A%84%E5%B8%B8%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">一堆杂乱的常识</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>二战时,苏联与盟军的对抗,红色指一级,警戒指盟军的入侵,苏联做好了准备! 红色泛指苏联等国家，而红色警戒的背景是2战期间，指的是西方盟国与苏联国家的PK红色警戒，英文名称Red Alert，又译“红色警报”，是美国艺电游戏公司（EA，Electronic Arts）为个人电脑（PC）推出的一系列即时战略游戏，玩家通常简称为红警或RA。</p>
+<p>《命令与征服：红色警戒》是一款即时战略游戏，搭配高清画面和优秀的即时战略方式，透过多人模式体验实时策略的命令与征服。3种不同难度等级的遭遇战给你全新手游体验。提供了遭遇战模式，选择三种不同难度等级，从简单到困难，享受一个符合你即时策略经验的挑战。用触摸屏的力量夺取胜利，用拖拽和滚动来审视战场。用捏夹进行缩放。用轻按选择并移动单位。一次性控制多个单位也不是问题。为苏联的统治而战，还是为盟军的和平而战。任意一方都有特别的作战计划，并且会在不同的故事情节中参战。征召经典单位（例如基洛夫飞艇）和新单位（例如圣武士坦克），或使用R&amp;D新科技粉碎你的敌人。</p>
+<p>红警这款游戏原本是黑苏联的，黑他们科技落后，使用了大量的辐射工兵，自爆卡车，恐怖分子，尤里等非人道主义单位，盟军是象征科技的超时空步兵等。但是由于没设计好，搞得游戏中苏军装备物美价廉，盟军华而不实一碰就碎，故吸引了许多精苏的粉丝。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/02/%E7%94%B5%E4%BD%8D%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/02/%E7%94%B5%E4%BD%8D%E5%99%A8/" class="post-title-link" itemprop="url">电位器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-02 22:46:28" itemprop="dateCreated datePublished" datetime="2022-11-02T22:46:28+08:00">2022-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">单片机学习之路</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>电位器是具有三个引出端、阻值可按某种变化规律调节的电阻元件。电位器通常由电阻体和可移动的电刷组成。当电刷沿电阻体移动时，在输出端即获得与位移量成一定关系的电阻值或电压。<br>电位器既可作三端元件使用也可作二端元件使用。后者可视作一可变电阻器，由于它在电路中的作用是获得与输入电压（外加电压）成一定关系的输出电压，因此称之为电位器。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/02/C4D%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/02/C4D%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">C4D基础</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-11-02 22:39:53 / 修改时间：22:41:41" itemprop="dateCreated datePublished" datetime="2022-11-02T22:39:53+08:00">2022-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C4D/" itemprop="url" rel="index"><span itemprop="name">C4D</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>b站的李翔的C4D入门教学（10个案例已完结）非常好，这一篇就是根据第一节写的<br>art＋鼠标左键 &#x3D; 变更视角<br>art + 滚轮 &#x3D; 平移<br>滚轮 或 （art + 鼠标右键） &#x3D; 放大缩小总界面<br>9 &#x3D; 实时选择，此时按方括号选择笔触大小<br>0  &#x3D; 框选<br>shift &#x3D; 多选，ctrl &#x3D; 减选<br>选中物体，t &#x3D; 缩放，r &#x3D; 旋转，e &#x3D; 移动<br>选中物体，c &#x3D; 转为可编辑对象，此时可以进入点模式等<br>选好，alt+g打包成组<br>正视图，选好，r，旋转，旋转时按shift，整的度数旋转<br>ctrl+拖动 &#x3D; 复制<br>选中线，移动模式，按住ctrl拖动，之作指针<br>选一个面，ctrl+往外拖 &#x3D; 变厚</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/01/EB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/01/EB/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-01 19:02:39" itemprop="dateCreated datePublished" datetime="2022-11-01T19:02:39+08:00">2022-11-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/01/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/01/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-01 10:35:12" itemprop="dateCreated datePublished" datetime="2022-11-01T10:35:12+08:00">2022-11-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/01/host%E6%98%A0%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="小田同学">
+      <meta itemprop="description" content="自强不息，厚德载物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小岛">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/01/host%E6%98%A0%E5%B0%84/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-01 10:32:55" itemprop="dateCreated datePublished" datetime="2022-11-01T10:32:55+08:00">2022-11-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
       
     </div>
 
@@ -896,7 +849,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -964,20 +917,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
