@@ -20,22 +20,9 @@
       </tags>
   </entry>
   <entry>
-    <title>C4D基础</title>
-    <url>/2022/11/02/C4D%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>b站的李翔的C4D入门教学（10个案例已完结）非常好，这一篇就是根据第一节写的<br>art＋鼠标左键 &#x3D; 变更视角<br>art + 滚轮 &#x3D; 平移<br>滚轮 或 （art + 鼠标右键） &#x3D; 放大缩小总界面<br>9 &#x3D; 实时选择，此时按方括号选择笔触大小<br>0  &#x3D; 框选<br>shift &#x3D; 多选，ctrl &#x3D; 减选<br>选中物体，t &#x3D; 缩放，r &#x3D; 旋转，e &#x3D; 移动<br>选中物体，c &#x3D; 转为可编辑对象，此时可以进入点模式等<br>选好，alt+g打包成组<br>正视图，选好，r，旋转，旋转时按shift，整的度数旋转<br>ctrl+拖动 &#x3D; 复制<br>选中线，移动模式，按住ctrl拖动，之作指针<br>选一个面，ctrl+往外拖 &#x3D; 变厚</p>
-]]></content>
-      <categories>
-        <category>C4D</category>
-      </categories>
-      <tags>
-        <tag>C4D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML、CSS小白学习方式：慕课网</title>
-    <url>/2022/11/08/Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<p><a href="https://www.icourse163.org/course/BFU-1003382003?from=searchPage&amp;outVendor=zw_mooc_pcssjg">https://www.icourse163.org/course/BFU-1003382003?from=searchPage&amp;outVendor=zw_mooc_pcssjg</a>_</p>
-]]></content>
+    <title></title>
+    <url>/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Linux操作系统和常用命令</title>
@@ -74,6 +61,38 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>C4D基础</title>
+    <url>/2022/11/02/C4D%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>b站的李翔的C4D入门教学（10个案例已完结）非常好，这一篇就是根据第一节写的<br>art＋鼠标左键 &#x3D; 变更视角<br>art + 滚轮 &#x3D; 平移<br>滚轮 或 （art + 鼠标右键） &#x3D; 放大缩小总界面<br>9 &#x3D; 实时选择，此时按方括号选择笔触大小<br>0  &#x3D; 框选<br>shift &#x3D; 多选，ctrl &#x3D; 减选<br>选中物体，t &#x3D; 缩放，r &#x3D; 旋转，e &#x3D; 移动<br>选中物体，c &#x3D; 转为可编辑对象，此时可以进入点模式等<br>选好，alt+g打包成组<br>正视图，选好，r，旋转，旋转时按shift，整的度数旋转<br>ctrl+拖动 &#x3D; 复制<br>选中线，移动模式，按住ctrl拖动，之作指针<br>选一个面，ctrl+往外拖 &#x3D; 变厚</p>
+]]></content>
+      <categories>
+        <category>C4D</category>
+      </categories>
+      <tags>
+        <tag>C4D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pytorch实现每一层的学习率不同</title>
+    <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C/</url>
+    <content><![CDATA[<p>目前我正在利用COPD口气小样本做迁移学习。之前我的策略是，固定卷积层的参数，调整全连接层参数。从《小样本研究综述》学到，使用逐级递增的学习率也是一个好方法。<br> <span id="more"></span></p>
+<p><a href="https://blog.csdn.net/qq_41554005/article/details/119898464?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166601087416781432921877%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166601087416781432921877&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-2-119898464-null-null.142%5Ev58%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C&spm=1018.2226.3001.4187">摘自CSDN</a></p>
+<p>我的代码（发了论文再填完整的）：<br>optimizer &#x3D; optim.SGD(<br>    [{“params”: model2.conv11.parameters(), “lr”: 0.0005},<br> ……<br>    {“params”: model2.conv5.parameters(), “lr”: 0.002},<br>    {“params”: model2.fc1.parameters()},<br>    {“params”: model2.fc3.parameters()}],<br>    lr&#x3D;0.02,momentum&#x3D;0.1)<br>效果还不错呀</p>
+]]></content>
+      <categories>
+        <category>pytorch与深度学习</category>
+      </categories>
+      <tags>
+        <tag>pytorch</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/11/01/host%E6%98%A0%E5%B0%84/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>pytorch实现学习率衰减</title>
     <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%A1%B0%E5%87%8F/</url>
     <content><![CDATA[<p>pytorch可以实现lr随epoch变化而变化<br> <span id="more"></span></p>
@@ -91,17 +110,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/2022/11/01/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/11/01/host%E6%98%A0%E5%B0%84/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -121,19 +130,9 @@
       </tags>
   </entry>
   <entry>
-    <title>pytorch实现每一层的学习率不同</title>
-    <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C/</url>
-    <content><![CDATA[<p>目前我正在利用COPD口气小样本做迁移学习。之前我的策略是，固定卷积层的参数，调整全连接层参数。从《小样本研究综述》学到，使用逐级递增的学习率也是一个好方法。<br> <span id="more"></span></p>
-<p><a href="https://blog.csdn.net/qq_41554005/article/details/119898464?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166601087416781432921877%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166601087416781432921877&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-2-119898464-null-null.142%5Ev58%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C&spm=1018.2226.3001.4187">摘自CSDN</a></p>
-<p>我的代码（发了论文再填完整的）：<br>optimizer &#x3D; optim.SGD(<br>    [{“params”: model2.conv11.parameters(), “lr”: 0.0005},<br> ……<br>    {“params”: model2.conv5.parameters(), “lr”: 0.002},<br>    {“params”: model2.fc1.parameters()},<br>    {“params”: model2.fc3.parameters()}],<br>    lr&#x3D;0.02,momentum&#x3D;0.1)<br>效果还不错呀</p>
-]]></content>
-      <categories>
-        <category>pytorch与深度学习</category>
-      </categories>
-      <tags>
-        <tag>pytorch</tag>
-        <tag>深度学习</tag>
-      </tags>
+    <title></title>
+    <url>/2022/10/27/windows%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0host/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>丝状病毒（埃博拉病毒，马尔堡病毒）</title>
@@ -149,11 +148,6 @@
         <tag>生物</tag>
         <tag>病毒</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/10/27/windows%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0host/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>两弹一星精神及元勋</title>
@@ -253,11 +247,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/10/18/%E5%8D%97%E9%9D%9E/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>博客搭建之路</title>
     <url>/2022/10/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF/</url>
     <content><![CDATA[<p>这篇文用来记录博客搭建中的一些问题。<br><em>博客搭建真的蛮有意思</em></p>
@@ -272,6 +261,11 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/18/%E5%8D%97%E9%9D%9E/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>发票</title>
@@ -302,29 +296,6 @@
       </tags>
   </entry>
   <entry>
-    <title>在windows11安装VMware与Ubuntu虚拟机</title>
-    <url>/2022/10/25/%E5%9C%A8windows11%E5%AE%89%E8%A3%85VMware%E4%B8%8EUbuntu%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
-    <content><![CDATA[ <span id="more"></span>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大数据实验需要在Linux系统操作。Ubuntu是一个以桌面应用为主的Linux操作系统从前人们认为Linux难以安装、难以使用，在Ubuntu出现后这些都成为了历史。Ubuntu也—<br>title: 分布式与集群，操作系统，Linux，VMware等常识<br>data: 2022&#x2F;10&#x2F;25<br>tags:</p>
-<ul>
-<li>Linux操作系统</li>
-<li>VMware<br>categories:</li>
-<li>大数据学习之路<br>—拥有庞大的社区力量，用户可以方便地从社区获得帮</li>
-</ul>
-<p>#。</p>
-<p>补充，后来我不用Ubuntu了，学黑马程序员用centos</p>
-<h2 id="虚拟机和Ubuntu下载"><a href="#虚拟机和Ubuntu下载" class="headerlink" title="虚拟机和Ubuntu下载"></a>虚拟机和Ubuntu下载</h2><p>首先在应用商店下载VMware<br>在MSDN下载Ubuntu</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>打开VMware，安装Ubuntu（我的安装路径如下图）<br><img src="https://img-blog.csdnimg.cn/8482be7b10fc4cb8a05be11347479093.png" alt="安装路径"><br>继续继续<br>在安装了<br><img src="https://img-blog.csdnimg.cn/548703d93d6a4b7fb8847f34d77d51e1.png" alt="安装ing"></p>
-]]></content>
-      <categories>
-        <category>大数据学习之路</category>
-      </categories>
-      <tags>
-        <tag>VMware</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hadoop大数据学习中的基本操作</title>
     <url>/2022/10/30/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>参考黑马Hadoop网课<br> <span id="more"></span></p>
@@ -348,49 +319,38 @@
       </tags>
   </entry>
   <entry>
-    <title>丝状病毒（埃博拉病毒，马尔堡病毒）</title>
-    <url>/2022/11/08/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/</url>
-    <content><![CDATA[<p>字符集是多个字符的集合，可以理解为二进制数，与字符的映射关系，唯一的一个编号就代表一个字。<br>字符编码是计算机中对字符的表示方式。<br>字符集与字符编码可以这样区分：<br>1.字符集是书写系统字母与符号的集合。<br>2.字符编码则是将字符映射为一特定的字节或字节序列，是一种规则。<br> <span id="more"></span></p>
-<h2 id="ASCLL码"><a href="#ASCLL码" class="headerlink" title="ASCLL码"></a>ASCLL码</h2><p>这是美国在19世纪60年代的时候为了建立英文字符和二进制的关系时制定的编码规范，它能表示128个字符，其中包括英文字符、阿拉伯数字、西文字符以及32个控制字符。它用一个字节来表示具体的字符，但它只用后7位来表示字符（2^7&#x3D;128），最前面的一位统一规定为0。</p>
-<h2 id="扩展的ASCII码"><a href="#扩展的ASCII码" class="headerlink" title="扩展的ASCII码"></a>扩展的ASCII码</h2><p>原本的ASCII码对于英文语言的国家是够用了，但是欧洲国家的一些语言会有拼音，这时7个字节就不够用了。因此一些欧洲国家就决定，利用字节中闲置的最高位编入新的符号。比如，法语中的é的编码为130（二进制10000010）。这样一来，这些欧洲国家使 用的编码体系，可以表示最多256个符号。但这时问题也出现了：不同的国家有不同的字母，因此，哪怕它们都使用256个符号的编码方式，代表的字母却不一样。比如，130在法语编码 中代表了é，在希伯来语编码中却代表了字母Gimel (ג)，在俄语编码中又会代表另一个符号。但是不管怎样，所有这些编码方式中，0—127表示的符号是一样的，不一样的只是128—255的这一段。这个问题就直接促使了Unicode编码的产生。</p>
-<h2 id="Unicode符号集"><a href="#Unicode符号集" class="headerlink" title="Unicode符号集"></a>Unicode符号集</h2><p>正如上一节所说，世界上存在着多种编码方式，同一个二进制数字可以被解释成不同的符号。因此，要想打开一个文本文件，就必须知道它的编码方式，否则用错误的编码方式解读，就会出现乱码。为什么电子邮件常常出现乱码？就是因为发信人和收信人使用的编码方式不一样。而Unicode就是这样一种编码：它包含了世界上所有的符号，并且每一个符号都是独一无二的。比如，U+0639表示阿拉伯字母Ain，U+0041表示英语的大写字母A，U+4E25表示汉字“严”。具体的符号对应表，可以查询unicode.org，或者专门的汉字对应表 。很多人都说Unicode编码，但其实Unicode是一个符号集（世界上所有符号的符号集），而不是一种新的编码方式。</p>
-<p>但是正因为Unicode包含了所有的字符，而有些国家的字符用一个字节便可以表示，而有些国家的字符要用多个字节才能表示出来。即产生了两个问题：第一，如果有两个字节的数据，那计算机怎么知道这两个字节是表示一个汉字呢？还是表示两个英文字母呢？第二，因为不同字符需要的存储长度不一样，那么如果Unicode规定用2个字节存储字符，那么英文字符存储时前面1个字节都是0，这就大大浪费了存储空间。</p>
-<p>上面两个问题造成的结果是：1）出现了unicode的多种存储方式，也就是说有许多种不同的二进制格式，可以用来表示unicode。2）unicode在很长一段时间内无法推广，直到互联网的出现</p>
-<h2 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h2><p>互联网的普及，强烈要求出现一种统一的编码方式。UTF-8就是在互联网上使用最广的一种unicode的实现方式。其他实现方式还包括UTF-16和UTF-32，不过在互联网上基本不用。重复一遍，这里的关系是，UTF-8是Unicode的实现方式之一。</p>
-<p>UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
-<p>UTF-8的编码规则很简单，只有两条：</p>
-<p>1）对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。</p>
-<p>2）对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</p>
-<h2 id="GBK-x2F-GB2312-x2F-GB18030"><a href="#GBK-x2F-GB2312-x2F-GB18030" class="headerlink" title="GBK&#x2F;GB2312&#x2F;GB18030"></a>GBK&#x2F;GB2312&#x2F;GB18030</h2><p>GBK和GB2312都是针对简体字的编码，只是GB2312只支持六千多个汉字的编码，而GBK支持1万多个汉字编码。而GB18030是用于繁体字的编码。汉字存储时都使用两个字节来储存。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>ASCII编码：用来表示英文，它使用1个字节表示，其中第一位规定为0，其他7位存储数据，一共可以表示128个字符。</p>
-<p>拓展ASCII编码：用于表示更多的欧洲文字，用8个位存储数据，一共可以表示256个字符</p>
-<p>GBK&#x2F;GB2312&#x2F;GB18030：表示汉字。GBK&#x2F;GB2312表示简体中文，GB18030表示繁体中文。</p>
-<p>Unicode编码：包含世界上所有的字符，是一个字符集。</p>
-<p>UTF-8：是Unicode字符的实现方式之一，它使用1-4个字符表示一个符号，根据不同的符号而变化字节长度。</p>
+    <title>在windows11安装VMware与Ubuntu虚拟机</title>
+    <url>/2022/10/25/%E5%9C%A8windows11%E5%AE%89%E8%A3%85VMware%E4%B8%8EUbuntu%E8%99%9A%E6%8B%9F%E6%9C%BA/</url>
+    <content><![CDATA[ <span id="more"></span>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大数据实验需要在Linux系统操作。Ubuntu是一个以桌面应用为主的Linux操作系统从前人们认为Linux难以安装、难以使用，在Ubuntu出现后这些都成为了历史。Ubuntu也—<br>title: 分布式与集群，操作系统，Linux，VMware等常识<br>data: 2022&#x2F;10&#x2F;25<br>tags:</p>
+<ul>
+<li>Linux操作系统</li>
+<li>VMware<br>categories:</li>
+<li>大数据学习之路<br>—拥有庞大的社区力量，用户可以方便地从社区获得帮</li>
+</ul>
+<p>#。</p>
+<p>补充，后来我不用Ubuntu了，学黑马程序员用centos</p>
+<h2 id="虚拟机和Ubuntu下载"><a href="#虚拟机和Ubuntu下载" class="headerlink" title="虚拟机和Ubuntu下载"></a>虚拟机和Ubuntu下载</h2><p>首先在应用商店下载VMware<br>在MSDN下载Ubuntu</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>打开VMware，安装Ubuntu（我的安装路径如下图）<br><img src="https://img-blog.csdnimg.cn/8482be7b10fc4cb8a05be11347479093.png" alt="安装路径"><br>继续继续<br>在安装了<br><img src="https://img-blog.csdnimg.cn/548703d93d6a4b7fb8847f34d77d51e1.png" alt="安装ing"></p>
 ]]></content>
       <categories>
-        <category>计算机常识</category>
+        <category>大数据学习之路</category>
       </categories>
       <tags>
-        <tag>计算机常识</tag>
+        <tag>VMware</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
-    <title>日记2022-11</title>
-    <url>/2022/11/02/%E6%97%A5%E8%AE%B02022-11/</url>
-    <content><![CDATA[ <span id="more"></span>
-
-
-<h2 id="11月2日，南宁，23点11，实训楼"><a href="#11月2日，南宁，23点11，实训楼" class="headerlink" title="11月2日，南宁，23点11，实训楼"></a>11月2日，南宁，23点11，实训楼</h2><p>写完这个就回宿舍洗澡去。其实写写日记也挺有意思的，说不定以后看到这个的时候会很有感触。<br>我是不是也可以做一个专门记录做了什么工作的日志呢?很久之前就有这个想法了，一直没有去付之于实践。<br>emm，我两天让一梦无语了两次。我忽然反应到，我对她的态度和对别人还是不一样，我把我的温柔与娇气都给了她，我像个不成熟的孩子一样（明我在别人面前是说一不二的老大角色，怎么对她是这样了呢…不服ing），不仅是对她，以后所作所为，不应该浮躁，我要成熟。<br>我否认不了，我就是很喜欢一梦，没办法做到平常心，像看待普通朋友一样看她，我好怕再次和她远离。<br>真的好奇怪啊，可我没有放弃真的很大程度上是因为，我想做个专一的人。我很想和她说，一遍一遍说，一梦我想你了。可她已经烦我了，我好烦啊，我都已经坚持这么久了，难道真的从一开始就注定不能在一起吗。我也想像其他男生对女朋友一样，把自己的呵护都给她。我也不会把她照顾得很没头脑，姑娘本来就是个很独立的人，这很好，我支持。我想和她一起努力，做喜欢的事<br>瞎想，我感觉是没可能。但我越想很难受，我不服命运啊，我不会离开她的。<br>这段时间我不找她了，我怕她烦我。</p>
-<p>与自己和解之后，我想做的事情还是没有做到，但是这不失为一种正确的想法。<br>我想做李小文，李叔同那样的人，不管社会什么样，以后尽力兼济天下。</p>
-<h2 id="11月4日，南宁，11点，实训楼"><a href="#11月4日，南宁，11点，实训楼" class="headerlink" title="11月4日，南宁，11点，实训楼"></a>11月4日，南宁，11点，实训楼</h2><p>今天，看了几节的操作系统网课，看了会relation network代码（还没看懂），做了两篇英语阅读16</p>
-<p>效率低下的原因很大程度是因为老玩，所以，学习别聊天，学习一定要锁机。<br>英语阅读现在读的很快了，十分多就能看完一篇但是正确率真的差强人意。必须要把所有选项都看完，我得想办法提升一下正确率了。<br>累</p>
+    <title>如何把博客添加到“资源”</title>
+    <url>/2022/11/08/%E5%A6%82%E4%BD%95%E6%8A%8A%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%88%B0%E2%80%9C%E8%B5%84%E6%BA%90%E2%80%9D/</url>
+    <content><![CDATA[<p>在md文件开头加一行(和data啦title一样)：type: resources</p>
 ]]></content>
       <categories>
-        <category>一堆杂乱的常识</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>物理</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -430,6 +390,34 @@
       </tags>
   </entry>
   <entry>
+    <title>丝状病毒（埃博拉病毒，马尔堡病毒）</title>
+    <url>/2022/11/08/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/</url>
+    <content><![CDATA[<p>字符集是多个字符的集合，可以理解为二进制数，与字符的映射关系，唯一的一个编号就代表一个字。<br>字符编码是计算机中对字符的表示方式。<br>字符集与字符编码可以这样区分：<br>1.字符集是书写系统字母与符号的集合。<br>2.字符编码则是将字符映射为一特定的字节或字节序列，是一种规则。<br> <span id="more"></span></p>
+<h2 id="ASCLL码"><a href="#ASCLL码" class="headerlink" title="ASCLL码"></a>ASCLL码</h2><p>这是美国在19世纪60年代的时候为了建立英文字符和二进制的关系时制定的编码规范，它能表示128个字符，其中包括英文字符、阿拉伯数字、西文字符以及32个控制字符。它用一个字节来表示具体的字符，但它只用后7位来表示字符（2^7&#x3D;128），最前面的一位统一规定为0。</p>
+<h2 id="扩展的ASCII码"><a href="#扩展的ASCII码" class="headerlink" title="扩展的ASCII码"></a>扩展的ASCII码</h2><p>原本的ASCII码对于英文语言的国家是够用了，但是欧洲国家的一些语言会有拼音，这时7个字节就不够用了。因此一些欧洲国家就决定，利用字节中闲置的最高位编入新的符号。比如，法语中的é的编码为130（二进制10000010）。这样一来，这些欧洲国家使 用的编码体系，可以表示最多256个符号。但这时问题也出现了：不同的国家有不同的字母，因此，哪怕它们都使用256个符号的编码方式，代表的字母却不一样。比如，130在法语编码 中代表了é，在希伯来语编码中却代表了字母Gimel (ג)，在俄语编码中又会代表另一个符号。但是不管怎样，所有这些编码方式中，0—127表示的符号是一样的，不一样的只是128—255的这一段。这个问题就直接促使了Unicode编码的产生。</p>
+<h2 id="Unicode符号集"><a href="#Unicode符号集" class="headerlink" title="Unicode符号集"></a>Unicode符号集</h2><p>正如上一节所说，世界上存在着多种编码方式，同一个二进制数字可以被解释成不同的符号。因此，要想打开一个文本文件，就必须知道它的编码方式，否则用错误的编码方式解读，就会出现乱码。为什么电子邮件常常出现乱码？就是因为发信人和收信人使用的编码方式不一样。而Unicode就是这样一种编码：它包含了世界上所有的符号，并且每一个符号都是独一无二的。比如，U+0639表示阿拉伯字母Ain，U+0041表示英语的大写字母A，U+4E25表示汉字“严”。具体的符号对应表，可以查询unicode.org，或者专门的汉字对应表 。很多人都说Unicode编码，但其实Unicode是一个符号集（世界上所有符号的符号集），而不是一种新的编码方式。</p>
+<p>但是正因为Unicode包含了所有的字符，而有些国家的字符用一个字节便可以表示，而有些国家的字符要用多个字节才能表示出来。即产生了两个问题：第一，如果有两个字节的数据，那计算机怎么知道这两个字节是表示一个汉字呢？还是表示两个英文字母呢？第二，因为不同字符需要的存储长度不一样，那么如果Unicode规定用2个字节存储字符，那么英文字符存储时前面1个字节都是0，这就大大浪费了存储空间。</p>
+<p>上面两个问题造成的结果是：1）出现了unicode的多种存储方式，也就是说有许多种不同的二进制格式，可以用来表示unicode。2）unicode在很长一段时间内无法推广，直到互联网的出现</p>
+<h2 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h2><p>互联网的普及，强烈要求出现一种统一的编码方式。UTF-8就是在互联网上使用最广的一种unicode的实现方式。其他实现方式还包括UTF-16和UTF-32，不过在互联网上基本不用。重复一遍，这里的关系是，UTF-8是Unicode的实现方式之一。</p>
+<p>UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
+<p>UTF-8的编码规则很简单，只有两条：</p>
+<p>1）对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。</p>
+<p>2）对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</p>
+<h2 id="GBK-x2F-GB2312-x2F-GB18030"><a href="#GBK-x2F-GB2312-x2F-GB18030" class="headerlink" title="GBK&#x2F;GB2312&#x2F;GB18030"></a>GBK&#x2F;GB2312&#x2F;GB18030</h2><p>GBK和GB2312都是针对简体字的编码，只是GB2312只支持六千多个汉字的编码，而GBK支持1万多个汉字编码。而GB18030是用于繁体字的编码。汉字存储时都使用两个字节来储存。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>ASCII编码：用来表示英文，它使用1个字节表示，其中第一位规定为0，其他7位存储数据，一共可以表示128个字符。</p>
+<p>拓展ASCII编码：用于表示更多的欧洲文字，用8个位存储数据，一共可以表示256个字符</p>
+<p>GBK&#x2F;GB2312&#x2F;GB18030：表示汉字。GBK&#x2F;GB2312表示简体中文，GB18030表示繁体中文。</p>
+<p>Unicode编码：包含世界上所有的字符，是一个字符集。</p>
+<p>UTF-8：是Unicode字符的实现方式之一，它使用1-4个字符表示一个符号，根据不同的符号而变化字节长度。</p>
+]]></content>
+      <categories>
+        <category>计算机常识</category>
+      </categories>
+      <tags>
+        <tag>计算机常识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2022/11/04/%E5%B8%83%E9%9B%B7%E6%96%AF%E6%82%96%E8%AE%BA/</url>
     <content><![CDATA[]]></content>
@@ -444,6 +432,24 @@
 <h2 id="10月30，南宁"><a href="#10月30，南宁" class="headerlink" title="10月30，南宁"></a>10月30，南宁</h2><p>今天是校运会，玩的挺嗨<br>昨天也好像是前天半夜两点搁一梦跟前又楞感慨说英语和自己的孤独感，她给我发了个无语的表情。有点难过，我反应过来我对她还是眷恋，既然她并不喜欢我，我就不应该去一厢情愿去一遍一遍去想她，给她掏心掏肺，我要克制自己不要想的太深。我现在觉得老去抱怨她肯定会烦我，能不能在一起是以后的事，或许把她当成一个朋友真的挺好。<br>听说追女生要学会隐藏自己，给她神秘感，可我就想做个坦诚的人啊，不想去刻意隐瞒自己<br>今天和一梦说想要互相监督，被拒绝了，但感觉和她聊天很是轻松，我喜欢这种感觉</p>
 <p>前一段时间熬夜上头了，自己什么问题自己知道，还是太不自律啦。我一直在逼着自己自律。逼着自己去学习，结果适得其反，报复性的对自己。我昨夜失眠了，我想要和自己和解。<br>怎么与自己和解呢？就是想想自己到底应该做什么，去认同自己<br>还有就是不要自卑了，我在后悔过去，羡慕别人的时候别人也在羡慕我。就像我教育学弟那样的：别把竞争看得太重，人生应当是学知识实现价值，而不是去竞争<br>学弟说，以前你一直教我怎么卷绩点，怎么这么佛系了？？<br>我也不知道，这个学期就看淡了，我喜欢这样</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>日记2022-11</title>
+    <url>/2022/11/02/%E6%97%A5%E8%AE%B02022-11/</url>
+    <content><![CDATA[ <span id="more"></span>
+
+
+<h2 id="11月2日，南宁，23点11，实训楼"><a href="#11月2日，南宁，23点11，实训楼" class="headerlink" title="11月2日，南宁，23点11，实训楼"></a>11月2日，南宁，23点11，实训楼</h2><p>写完这个就回宿舍洗澡去。其实写写日记也挺有意思的，说不定以后看到这个的时候会很有感触。<br>我是不是也可以做一个专门记录做了什么工作的日志呢?很久之前就有这个想法了，一直没有去付之于实践。<br>emm，我两天让一梦无语了两次。我忽然反应到，我对她的态度和对别人还是不一样，我把我的温柔与娇气都给了她，我像个不成熟的孩子一样（明我在别人面前是说一不二的老大角色，怎么对她是这样了呢…不服ing），不仅是对她，以后所作所为，不应该浮躁，我要成熟。<br>我否认不了，我就是很喜欢一梦，没办法做到平常心，像看待普通朋友一样看她，我好怕再次和她远离。<br>真的好奇怪啊，可我没有放弃真的很大程度上是因为，我想做个专一的人。我很想和她说，一遍一遍说，一梦我想你了。可她已经烦我了，我好烦啊，我都已经坚持这么久了，难道真的从一开始就注定不能在一起吗。我也想像其他男生对女朋友一样，把自己的呵护都给她。我也不会把她照顾得很没头脑，姑娘本来就是个很独立的人，这很好，我支持。我想和她一起努力，做喜欢的事<br>瞎想，我感觉是没可能。但我越想很难受，我不服命运啊，我不会离开她的。<br>这段时间我不找她了，我怕她烦我。</p>
+<p>与自己和解之后，我想做的事情还是没有做到，但是这不失为一种正确的想法。<br>我想做李小文，李叔同那样的人，不管社会什么样，以后尽力兼济天下。</p>
+<h2 id="11月4日，南宁，11点，实训楼"><a href="#11月4日，南宁，11点，实训楼" class="headerlink" title="11月4日，南宁，11点，实训楼"></a>11月4日，南宁，11点，实训楼</h2><p>今天，看了几节的操作系统网课，看了会relation network代码（还没看懂），做了两篇英语阅读16</p>
+<p>效率低下的原因很大程度是因为老玩，所以，学习别聊天，学习一定要锁机。<br>英语阅读现在读的很快了，十分多就能看完一篇但是正确率真的差强人意。必须要把所有选项都看完，我得想办法提升一下正确率了。<br>累</p>
+]]></content>
+      <categories>
+        <category>一堆杂乱的常识</category>
+      </categories>
+      <tags>
+        <tag>物理</tag>
+      </tags>
   </entry>
   <entry>
     <title>李小文</title>
@@ -486,6 +492,11 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2022/10/26/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>科技公司巨头盘点</title>
     <url>/2022/10/25/%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%E5%B7%A8%E5%A4%B4%E7%9B%98%E7%82%B9/</url>
     <content><![CDATA[ <span id="more"></span>
@@ -511,25 +522,6 @@
         <tag>商业</tag>
         <tag>科技</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>红警</title>
-    <url>/2022/11/02/%E7%BA%A2%E8%AD%A6/</url>
-    <content><![CDATA[<p>二战时,苏联与盟军的对抗,红色指一级,警戒指盟军的入侵,苏联做好了准备! 红色泛指苏联等国家，而红色警戒的背景是2战期间，指的是西方盟国与苏联国家的PK红色警戒，英文名称Red Alert，又译“红色警报”，是美国艺电游戏公司（EA，Electronic Arts）为个人电脑（PC）推出的一系列即时战略游戏，玩家通常简称为红警或RA。</p>
-<p>《命令与征服：红色警戒》是一款即时战略游戏，搭配高清画面和优秀的即时战略方式，透过多人模式体验实时策略的命令与征服。3种不同难度等级的遭遇战给你全新手游体验。提供了遭遇战模式，选择三种不同难度等级，从简单到困难，享受一个符合你即时策略经验的挑战。用触摸屏的力量夺取胜利，用拖拽和滚动来审视战场。用捏夹进行缩放。用轻按选择并移动单位。一次性控制多个单位也不是问题。为苏联的统治而战，还是为盟军的和平而战。任意一方都有特别的作战计划，并且会在不同的故事情节中参战。征召经典单位（例如基洛夫飞艇）和新单位（例如圣武士坦克），或使用R&amp;D新科技粉碎你的敌人。</p>
-<p>红警这款游戏原本是黑苏联的，黑他们科技落后，使用了大量的辐射工兵，自爆卡车，恐怖分子，尤里等非人道主义单位，盟军是象征科技的超时空步兵等。但是由于没设计好，搞得游戏中苏军装备物美价廉，盟军华而不实一碰就碎，故吸引了许多精苏的粉丝。</p>
-]]></content>
-      <categories>
-        <category>一堆杂乱的常识</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/10/26/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>网络连接的几种模式</title>
@@ -568,9 +560,18 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/10/27/%E8%85%BF%E9%BA%BB/</url>
-    <content><![CDATA[]]></content>
+    <title>红警</title>
+    <url>/2022/11/02/%E7%BA%A2%E8%AD%A6/</url>
+    <content><![CDATA[<p>二战时,苏联与盟军的对抗,红色指一级,警戒指盟军的入侵,苏联做好了准备! 红色泛指苏联等国家，而红色警戒的背景是2战期间，指的是西方盟国与苏联国家的PK红色警戒，英文名称Red Alert，又译“红色警报”，是美国艺电游戏公司（EA，Electronic Arts）为个人电脑（PC）推出的一系列即时战略游戏，玩家通常简称为红警或RA。</p>
+<p>《命令与征服：红色警戒》是一款即时战略游戏，搭配高清画面和优秀的即时战略方式，透过多人模式体验实时策略的命令与征服。3种不同难度等级的遭遇战给你全新手游体验。提供了遭遇战模式，选择三种不同难度等级，从简单到困难，享受一个符合你即时策略经验的挑战。用触摸屏的力量夺取胜利，用拖拽和滚动来审视战场。用捏夹进行缩放。用轻按选择并移动单位。一次性控制多个单位也不是问题。为苏联的统治而战，还是为盟军的和平而战。任意一方都有特别的作战计划，并且会在不同的故事情节中参战。征召经典单位（例如基洛夫飞艇）和新单位（例如圣武士坦克），或使用R&amp;D新科技粉碎你的敌人。</p>
+<p>红警这款游戏原本是黑苏联的，黑他们科技落后，使用了大量的辐射工兵，自爆卡车，恐怖分子，尤里等非人道主义单位，盟军是象征科技的超时空步兵等。但是由于没设计好，搞得游戏中苏军装备物美价廉，盟军华而不实一碰就碎，故吸引了许多精苏的粉丝。</p>
+]]></content>
+      <categories>
+        <category>一堆杂乱的常识</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title>赫尔墨斯与潘</title>
@@ -593,6 +594,11 @@
       <tags>
         <tag>希腊神话</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/27/%E8%85%BF%E9%BA%BB/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>身份证号的数字含义</title>
