@@ -20,11 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>C4D基础</title>
     <url>/2022/11/02/C4D%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>b站的李翔的C4D入门教学（10个案例已完结）非常好，这一篇就是根据第一节写的<br>art＋鼠标左键 &#x3D; 变更视角<br>art + 滚轮 &#x3D; 平移<br>滚轮 或 （art + 鼠标右键） &#x3D; 放大缩小总界面<br>9 &#x3D; 实时选择，此时按方括号选择笔触大小<br>0  &#x3D; 框选<br>shift &#x3D; 多选，ctrl &#x3D; 减选<br>选中物体，t &#x3D; 缩放，r &#x3D; 旋转，e &#x3D; 移动<br>选中物体，c &#x3D; 转为可编辑对象，此时可以进入点模式等<br>选好，alt+g打包成组<br>正视图，选好，r，旋转，旋转时按shift，整的度数旋转<br>ctrl+拖动 &#x3D; 复制<br>选中线，移动模式，按住ctrl拖动，之作指针<br>选一个面，ctrl+往外拖 &#x3D; 变厚</p>
@@ -37,8 +32,26 @@
       </tags>
   </entry>
   <entry>
+    <title>ORCID</title>
+    <url>/2022/12/29/ORCID/</url>
+    <content><![CDATA[<p>ORCID（Open Researcher and Contributor ID），即开放研究者与贡献者身份识别码。ORCID会保留特定的ISNI识别码给学术研究者，并由独立机构管理。</p>
+<p>我的账号是outlook邮箱<br>密码是拼音数字常用密码</p>
+]]></content>
+      <categories>
+        <category>计算机常识</category>
+      </categories>
+      <tags>
+        <tag>ORCID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/2022/11/01/EB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/28/Android%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -73,21 +86,6 @@
       </tags>
   </entry>
   <entry>
-    <title>pytorch实现每一层的学习率不同</title>
-    <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C/</url>
-    <content><![CDATA[<p>目前我正在利用COPD口气小样本做迁移学习。之前我的策略是，固定卷积层的参数，调整全连接层参数。从《小样本研究综述》学到，使用逐级递增的学习率也是一个好方法。<br> <span id="more"></span></p>
-<p><a href="https://blog.csdn.net/qq_41554005/article/details/119898464?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166601087416781432921877%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166601087416781432921877&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-2-119898464-null-null.142%5Ev58%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C&spm=1018.2226.3001.4187">摘自CSDN</a></p>
-<p>我的代码（发了论文再填完整的）：<br>optimizer &#x3D; optim.SGD(<br>    [{“params”: model2.conv11.parameters(), “lr”: 0.0005},<br> ……<br>    {“params”: model2.conv5.parameters(), “lr”: 0.002},<br>    {“params”: model2.fc1.parameters()},<br>    {“params”: model2.fc3.parameters()}],<br>    lr&#x3D;0.02,momentum&#x3D;0.1)<br>效果还不错呀</p>
-]]></content>
-      <categories>
-        <category>pytorch与深度学习</category>
-      </categories>
-      <tags>
-        <tag>pytorch</tag>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>pytorch实现学习率衰减</title>
     <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%A1%B0%E5%87%8F/</url>
     <content><![CDATA[<p>pytorch可以实现lr随epoch变化而变化<br> <span id="more"></span></p>
@@ -102,11 +100,6 @@
         <tag>pytorch</tag>
         <tag>深度学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/11/01/host%E6%98%A0%E5%B0%84/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>vim编辑器介绍及其基本操作命令</title>
@@ -125,6 +118,31 @@
       </tags>
   </entry>
   <entry>
+    <title>pytorch实现每一层的学习率不同</title>
+    <url>/2022/10/17/pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C/</url>
+    <content><![CDATA[<p>目前我正在利用COPD口气小样本做迁移学习。之前我的策略是，固定卷积层的参数，调整全连接层参数。从《小样本研究综述》学到，使用逐级递增的学习率也是一个好方法。<br> <span id="more"></span></p>
+<p><a href="https://blog.csdn.net/qq_41554005/article/details/119898464?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166601087416781432921877%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166601087416781432921877&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~pc_rank_34-2-119898464-null-null.142%5Ev58%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=pytorch%E5%AE%9E%E7%8E%B0%E6%AF%8F%E4%B8%80%E5%B1%82%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%8E%87%E4%B8%8D%E5%90%8C&spm=1018.2226.3001.4187">摘自CSDN</a></p>
+<p>我的代码（发了论文再填完整的）：<br>optimizer &#x3D; optim.SGD(<br>    [{“params”: model2.conv11.parameters(), “lr”: 0.0005},<br> ……<br>    {“params”: model2.conv5.parameters(), “lr”: 0.002},<br>    {“params”: model2.fc1.parameters()},<br>    {“params”: model2.fc3.parameters()}],<br>    lr&#x3D;0.02,momentum&#x3D;0.1)<br>效果还不错呀</p>
+]]></content>
+      <categories>
+        <category>pytorch与深度学习</category>
+      </categories>
+      <tags>
+        <tag>pytorch</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/11/01/host%E6%98%A0%E5%B0%84/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/11/01/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>丝状病毒（埃博拉病毒，马尔堡病毒）</title>
     <url>/2022/10/25/%E4%B8%9D%E7%8A%B6%E7%97%85%E6%AF%92/</url>
     <content><![CDATA[<p>丝状病毒（学名：Filovirus）属于丝状病毒科，单股反链RNA病毒目，是一种感染脊椎动物的病毒，已知的属有埃博拉病毒、马尔堡病毒和库瓦病毒。病毒粒（Virion）具有复杂构造，具外套膜（envelope），核鞘（nucleocapsid），聚合酶复合体和基质（Matrix）。病毒粒包裹在外套膜中。病毒的外形呈丝状，或具分支多形态，或U形，6形，或圆形（特别在纯化后），病毒的直径约80nm，可达1400nm长，纯化出的病毒长度可能达790-970nm。表面有瘤状突起的形状，散布在脂质双层膜中。</p>
@@ -137,22 +155,6 @@
       <tags>
         <tag>生物</tag>
         <tag>病毒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>两弹一星精神及元勋</title>
-    <url>/2022/10/30/%E4%B8%A4%E5%BC%B9%E4%B8%80%E6%98%9F%E7%B2%BE%E7%A5%9E%E5%8F%8A%E5%85%83%E5%8B%8B/</url>
-    <content><![CDATA[<p>“两弹”，一个是核弹，核弹包括原子弹和氢弹，还有一个是导弹。“一星”就是人造卫星。1999年9月18日，江泽民同志在表彰为研制“两弹一星”作出突出贡献的科技专家大会上发表讲话，将“两弹一星精神”概括为“热爱祖国、无私奉献，自力更生、艰苦奋斗，大力协同、勇于登攀”二十四个字。<br> <span id="more"></span><br> 以下人物摘自立德树人中心</p>
-<h2 id="黄旭华-核潜艇之父"><a href="#黄旭华-核潜艇之父" class="headerlink" title="黄旭华 核潜艇之父"></a>黄旭华 核潜艇之父</h2><p>中国核潜艇之父黄旭华，出身医学世家，少年时本立志学医济世，可日军的枪炮声打碎了他的医学梦，他开始重新思考民族和国家的未来，“国家太弱就会任人欺凌！我不学医了我要读航空、造船，将来制造军舰来抵御外国的侵略。”而志强便国强。因为这个信念与执着，黄旭华先生自此一生扎根在中国的核潜艇事业上。<br>1958年，一封《关于开展研制导弹原子潜艇的报告》报告被送到毛主席桌上，毛主席大笔一挥，批准！于是同年，还在上海的黄旭华接到了一通来自北京的电话。他本以为是正常工作出差，到了北京后才得知是国家要搞核潜艇！中国核潜艇事业就在这样的条件下开始起步！而在此之前，美国苏联的核潜艇已相继下海适航。我国本寻求苏联的帮助也因赫鲁晓夫对政治利益的考量而碰壁。所以中国人自发建造自己的核潜艇保卫国家安全已刻不容缓！<br>因为研发工作需要保密，黄旭华告别父母姐妹隐姓埋名三十余年，一直在科研一线奋斗，甚至未能见到老父亲最后一面。面对家人的误解，他说：“我对国家的忠就是对父母最大的孝。”1970年，我国第一艘核潜艇下水实验成功；1974年，第一艘核潜艇被编入我国海军序列······在那个百废待兴的年代，黄旭华先生的赤子之心与凌云之志，就是这个国家最大的财富。他是名副其实的核潜艇之父！<br>捐躯赴国难，视死忽如归。黄旭华先生用自己的一生诠释了何为无私奉献、何为对国家的大爱。他的所作所为正如鲁迅先生所说：“摆脱冷气只是往上走，能做事的做事能发声的发声。”天下兴亡匹夫有责。他以真诚的赤子之心投身于国防安全事业，是中华民族的骄傲，也是所有中国儿女的榜样。</p>
-<h2 id="钱学森-导弹之父"><a href="#钱学森-导弹之父" class="headerlink" title="钱学森 导弹之父"></a>钱学森 导弹之父</h2><p>“在他心里，国为重，家为轻，科学最重，名利最轻。5年归国路，10年两弹成。开创祖国航天，他是先行人，披荆斩棘，把智慧锻造成阶梯，留给后来的攀登者。他是知识的宝藏，是科学的旗帜，是中华民族知识分子的典范。”<br>他就是我国的航天之父、导弹之父——钱学森。<br>1949年，时刻挂念祖国的钱老得知新中国成立，心中汹涌澎湃，立刻决心回国参加建设。当时的钱学森在航天和制导领域已经取得极高的成就，并被称作是“在美国处于领导地位的第一位火箭专家”。可在他心里：我可以放弃在美国的一切，但不能放弃祖国！钱学森先生时刻盼望早日回到祖国并为建设社会主义新中国贡献自己的力量。此时的美国，部分政治集团正在对中国留学生实行全面清查，钱学森赫然在列，虽然他失去了参加机密研究的证书，但是美国当局也禁止他回国。面对来自美国政府的压力，钱老没有屈服，坚决抗议，并同时积极联系各方力量，终于在双方政府的谈判交涉下，历经五年时间，钱老先生在1955年乘上了回到祖国的轮船。<br>钱老的回国效力，让我国的航天事业蓬勃发展，开启了全新的篇章。阎肃先生曾经这么评价钱老：大千宇宙，浩瀚长空，全纳入赤子心胸。惊世两弹，冲霄一星，尽凝铸中华豪情，霜鬓不坠青云志。寿至期颐，回首望去，只付默默一笑中。钱老的精神是一面旗帜，激励着着我们坚守信念，奋勇向前。</p>
-<h2 id="于敏"><a href="#于敏" class="headerlink" title="于敏"></a>于敏</h2><p>被授予共和国勋章的中科院院士于敏院士曾说：“任何一个国家任何时候都会有不同的人追求不同的价值观 ，但是如果这个民族还有希望的话，在一代的人里面必须有这么一批人追求，以民族振兴国家振兴为己任。”<br>从与合作者提出原子核相干结构模型填补我国原子核理论的空白，到接受氢弹理论探索任务，再到取得我国氢弹事业的成功。于老先生从未出国，同样成为世界顶级的原子物理学家。我们没法想象于敏老先生在国内无资料国外全保密的情况下要付出多少心血要历经多少日夜才能创造出这样的 “中国奇迹”。于敏老先生以氢弹献中华神州，以国之重器烈血荐轩辕。于敏先生本人正如感动中国的颁奖词所形容那样：“受命之日，寝不安席，当年吴钩，申城淬火，十月出塞，大器初成。一句嘱托，许下了一生；一声巨响，惊诧了世界；一个名字，荡涤了人心。”</p>
-<h2 id="邓稼先-两弹之父"><a href="#邓稼先-两弹之父" class="headerlink" title="邓稼先 两弹之父"></a>邓稼先 两弹之父</h2><p>为国奉献，默默无闻；赤字之心，真诚坦白。他不曾在绝望的沙漠中退缩，也不会在单调的生活中彷徨。在国家和民族的事业上，他始终奋勇向前！在国家核武器事业中，他创立了不世之功！他，就是邓稼先！国家的安全，他是奠基者；民族的崛起，他是领跑者！<br>艰难苦涩的少年经历坚定了邓稼先兴盛祖国的信念。在“七七”事变后，由于战争，他留在北京。在北京期间，他结识了各路仁人志士，积极参加各类抗日聚会，而爱国救亡的信念也愈发的坚定！1941年，他如愿考进西南联大，师从郑华炽、王竹溪等知名教授学习物理，后又远赴美国，攻读博士学位。在普渡大学，邓稼先通过仅两年时间的学习，便取得了博士学位。此时的邓稼先，还不足26岁！1950年，在获得博士学位还不足十天时，他便向恩师和同校好友告别，谢绝挽留，毅然回国。<br>邓稼先1950年秋回到中国。此时刚刚成立的中华人民共和国，分外需要邓稼先先生一般的人才。他一回到中国，便全身心投入到中科院近代物理研究所的研究工作。1958年，时任国家二机部副部长的刘杰突然造访，激动的告诉邓稼先，国家决定干一项“大事业”，并询问他是否愿意暂时告别家人，远赴边疆，参加这项绝对保密的工作。邓稼先的回答当然是义无反顾。自此邓稼先便在人们的视野中消失，他的名字在中外报道中也再未被提及。而他本人则作为中国原子弹项目的一员，远在荒凉的戈壁中······<br>1964年10月，由他签字确定设计方案的我国第一颗原子弹成功爆炸！消息传出，举世瞩目！为证实实验效果，他不顾危险，在试验后亲自带队进入爆炸现场进行采样，以获得最可靠的实验数据。原子弹成功后，他又转身投入对氢弹的研究。仅仅历时两年零八个月，1967年6月，按照“邓-于方案”设计的我国第一枚300多吨当量的氢弹试验获得成功。<br>“干惊天动地事，做隐姓埋名人。”邓稼先扎根边疆，艰苦奋斗，鞠躬尽瘁，用毕生精力为我国核事业奠基！其矢志科研、敢于攻关、勇攀高峰的科学家精神，是我们国家和民族最为宝贵的精神财富。新中国从一无所有到如今国富民强山河无恙，离不开像于敏、邓稼先这样一心为国无私奉献的科学家。国家和民族需要像他们这样的人做脊梁，担起振兴我华夏民族振兴我泱泱中国的担子。</p>
-]]></content>
-      <categories>
-        <category>一堆杂乱的常识</category>
-      </categories>
-      <tags>
-        <tag>名人</tag>
       </tags>
   </entry>
   <entry>
@@ -175,9 +177,38 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/11/01/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</url>
-    <content><![CDATA[]]></content>
+    <title>两弹一星精神及元勋</title>
+    <url>/2022/10/30/%E4%B8%A4%E5%BC%B9%E4%B8%80%E6%98%9F%E7%B2%BE%E7%A5%9E%E5%8F%8A%E5%85%83%E5%8B%8B/</url>
+    <content><![CDATA[<p>“两弹”，一个是核弹，核弹包括原子弹和氢弹，还有一个是导弹。“一星”就是人造卫星。1999年9月18日，江泽民同志在表彰为研制“两弹一星”作出突出贡献的科技专家大会上发表讲话，将“两弹一星精神”概括为“热爱祖国、无私奉献，自力更生、艰苦奋斗，大力协同、勇于登攀”二十四个字。<br> <span id="more"></span><br> 以下人物摘自立德树人中心</p>
+<h2 id="黄旭华-核潜艇之父"><a href="#黄旭华-核潜艇之父" class="headerlink" title="黄旭华 核潜艇之父"></a>黄旭华 核潜艇之父</h2><p>中国核潜艇之父黄旭华，出身医学世家，少年时本立志学医济世，可日军的枪炮声打碎了他的医学梦，他开始重新思考民族和国家的未来，“国家太弱就会任人欺凌！我不学医了我要读航空、造船，将来制造军舰来抵御外国的侵略。”而志强便国强。因为这个信念与执着，黄旭华先生自此一生扎根在中国的核潜艇事业上。<br>1958年，一封《关于开展研制导弹原子潜艇的报告》报告被送到毛主席桌上，毛主席大笔一挥，批准！于是同年，还在上海的黄旭华接到了一通来自北京的电话。他本以为是正常工作出差，到了北京后才得知是国家要搞核潜艇！中国核潜艇事业就在这样的条件下开始起步！而在此之前，美国苏联的核潜艇已相继下海适航。我国本寻求苏联的帮助也因赫鲁晓夫对政治利益的考量而碰壁。所以中国人自发建造自己的核潜艇保卫国家安全已刻不容缓！<br>因为研发工作需要保密，黄旭华告别父母姐妹隐姓埋名三十余年，一直在科研一线奋斗，甚至未能见到老父亲最后一面。面对家人的误解，他说：“我对国家的忠就是对父母最大的孝。”1970年，我国第一艘核潜艇下水实验成功；1974年，第一艘核潜艇被编入我国海军序列······在那个百废待兴的年代，黄旭华先生的赤子之心与凌云之志，就是这个国家最大的财富。他是名副其实的核潜艇之父！<br>捐躯赴国难，视死忽如归。黄旭华先生用自己的一生诠释了何为无私奉献、何为对国家的大爱。他的所作所为正如鲁迅先生所说：“摆脱冷气只是往上走，能做事的做事能发声的发声。”天下兴亡匹夫有责。他以真诚的赤子之心投身于国防安全事业，是中华民族的骄傲，也是所有中国儿女的榜样。</p>
+<h2 id="钱学森-导弹之父"><a href="#钱学森-导弹之父" class="headerlink" title="钱学森 导弹之父"></a>钱学森 导弹之父</h2><p>“在他心里，国为重，家为轻，科学最重，名利最轻。5年归国路，10年两弹成。开创祖国航天，他是先行人，披荆斩棘，把智慧锻造成阶梯，留给后来的攀登者。他是知识的宝藏，是科学的旗帜，是中华民族知识分子的典范。”<br>他就是我国的航天之父、导弹之父——钱学森。<br>1949年，时刻挂念祖国的钱老得知新中国成立，心中汹涌澎湃，立刻决心回国参加建设。当时的钱学森在航天和制导领域已经取得极高的成就，并被称作是“在美国处于领导地位的第一位火箭专家”。可在他心里：我可以放弃在美国的一切，但不能放弃祖国！钱学森先生时刻盼望早日回到祖国并为建设社会主义新中国贡献自己的力量。此时的美国，部分政治集团正在对中国留学生实行全面清查，钱学森赫然在列，虽然他失去了参加机密研究的证书，但是美国当局也禁止他回国。面对来自美国政府的压力，钱老没有屈服，坚决抗议，并同时积极联系各方力量，终于在双方政府的谈判交涉下，历经五年时间，钱老先生在1955年乘上了回到祖国的轮船。<br>钱老的回国效力，让我国的航天事业蓬勃发展，开启了全新的篇章。阎肃先生曾经这么评价钱老：大千宇宙，浩瀚长空，全纳入赤子心胸。惊世两弹，冲霄一星，尽凝铸中华豪情，霜鬓不坠青云志。寿至期颐，回首望去，只付默默一笑中。钱老的精神是一面旗帜，激励着着我们坚守信念，奋勇向前。</p>
+<h2 id="于敏"><a href="#于敏" class="headerlink" title="于敏"></a>于敏</h2><p>被授予共和国勋章的中科院院士于敏院士曾说：“任何一个国家任何时候都会有不同的人追求不同的价值观 ，但是如果这个民族还有希望的话，在一代的人里面必须有这么一批人追求，以民族振兴国家振兴为己任。”<br>从与合作者提出原子核相干结构模型填补我国原子核理论的空白，到接受氢弹理论探索任务，再到取得我国氢弹事业的成功。于老先生从未出国，同样成为世界顶级的原子物理学家。我们没法想象于敏老先生在国内无资料国外全保密的情况下要付出多少心血要历经多少日夜才能创造出这样的 “中国奇迹”。于敏老先生以氢弹献中华神州，以国之重器烈血荐轩辕。于敏先生本人正如感动中国的颁奖词所形容那样：“受命之日，寝不安席，当年吴钩，申城淬火，十月出塞，大器初成。一句嘱托，许下了一生；一声巨响，惊诧了世界；一个名字，荡涤了人心。”</p>
+<h2 id="邓稼先-两弹之父"><a href="#邓稼先-两弹之父" class="headerlink" title="邓稼先 两弹之父"></a>邓稼先 两弹之父</h2><p>为国奉献，默默无闻；赤字之心，真诚坦白。他不曾在绝望的沙漠中退缩，也不会在单调的生活中彷徨。在国家和民族的事业上，他始终奋勇向前！在国家核武器事业中，他创立了不世之功！他，就是邓稼先！国家的安全，他是奠基者；民族的崛起，他是领跑者！<br>艰难苦涩的少年经历坚定了邓稼先兴盛祖国的信念。在“七七”事变后，由于战争，他留在北京。在北京期间，他结识了各路仁人志士，积极参加各类抗日聚会，而爱国救亡的信念也愈发的坚定！1941年，他如愿考进西南联大，师从郑华炽、王竹溪等知名教授学习物理，后又远赴美国，攻读博士学位。在普渡大学，邓稼先通过仅两年时间的学习，便取得了博士学位。此时的邓稼先，还不足26岁！1950年，在获得博士学位还不足十天时，他便向恩师和同校好友告别，谢绝挽留，毅然回国。<br>邓稼先1950年秋回到中国。此时刚刚成立的中华人民共和国，分外需要邓稼先先生一般的人才。他一回到中国，便全身心投入到中科院近代物理研究所的研究工作。1958年，时任国家二机部副部长的刘杰突然造访，激动的告诉邓稼先，国家决定干一项“大事业”，并询问他是否愿意暂时告别家人，远赴边疆，参加这项绝对保密的工作。邓稼先的回答当然是义无反顾。自此邓稼先便在人们的视野中消失，他的名字在中外报道中也再未被提及。而他本人则作为中国原子弹项目的一员，远在荒凉的戈壁中······<br>1964年10月，由他签字确定设计方案的我国第一颗原子弹成功爆炸！消息传出，举世瞩目！为证实实验效果，他不顾危险，在试验后亲自带队进入爆炸现场进行采样，以获得最可靠的实验数据。原子弹成功后，他又转身投入对氢弹的研究。仅仅历时两年零八个月，1967年6月，按照“邓-于方案”设计的我国第一枚300多吨当量的氢弹试验获得成功。<br>“干惊天动地事，做隐姓埋名人。”邓稼先扎根边疆，艰苦奋斗，鞠躬尽瘁，用毕生精力为我国核事业奠基！其矢志科研、敢于攻关、勇攀高峰的科学家精神，是我们国家和民族最为宝贵的精神财富。新中国从一无所有到如今国富民强山河无恙，离不开像于敏、邓稼先这样一心为国无私奉献的科学家。国家和民族需要像他们这样的人做脊梁，担起振兴我华夏民族振兴我泱泱中国的担子。</p>
+]]></content>
+      <categories>
+        <category>一堆杂乱的常识</category>
+      </categories>
+      <tags>
+        <tag>名人</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分布式与集群，操作系统，Linux，VMware等常识</title>
+    <url>/2022/10/25/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E9%9B%86%E7%BE%A4%EF%BC%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%8CLinux%EF%BC%8CVMware%E7%AD%89%E5%B8%B8%E8%AF%86/</url>
+    <content><![CDATA[ <span id="more"></span>
+
+<h2 id="分布式与集群"><a href="#分布式与集群" class="headerlink" title="分布式与集群"></a>分布式与集群</h2><p><img src="https://img-blog.csdnimg.cn/8a465fe5081c46d9905c4634463b03ff.png" alt="分布式与集群"><br>分布式储存解决大数据量太大的问题，这台机器放一点那台机器放一点<br>分布式计算解决单个计算机计算能力有瓶颈，需要高效计算的问题 </p>
+<h2 id="操作系统及其分类"><a href="#操作系统及其分类" class="headerlink" title="操作系统及其分类"></a>操作系统及其分类</h2><p><img src="https://img-blog.csdnimg.cn/d7e4787ad47147c190df8a5f8af3bd35.png" alt="在这里插入图片描述"><br>操作系统可以分成四类<br><img src="https://img-blog.csdnimg.cn/0d8f1c2f2d3a4a31afaa41611380c39e.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/98875643a9c44d0aae501dd09ca2dc69.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/9ba750bca38b485d806eed2f64983ff5.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/b379ee462a6f4c608fb29a5128f48dec.png" alt="在这里插入图片描述"></p>
+<h2 id="Linux的起源与发展"><a href="#Linux的起源与发展" class="headerlink" title="Linux的起源与发展"></a>Linux的起源与发展</h2><p><img src="https://img-blog.csdnimg.cn/6ecf8071f558456190cd79c1d61be48b.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/f5e57703611c492aa7dac6e3bb4064f7.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/913a5561618c4c95b84ccc935013ddc5.png" alt="在这里插入图片描述"></p>
+<h2 id="VMware虚拟机概念及安装"><a href="#VMware虚拟机概念及安装" class="headerlink" title="VMware虚拟机概念及安装"></a>VMware虚拟机概念及安装</h2><p><img src="https://img-blog.csdnimg.cn/086381d3ac554d7483d5bd42e54f55ef.png" alt="在这里插入图片描述"><br>上面第一个是服务器，配置特别好，第二个是交换机，和服务器连上网线就是局域网<br><img src="https://img-blog.csdnimg.cn/d3c14a9c559d448aa882efca21ddedbd.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/126ed93fd3bb44fba9e330b0a687be4c.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/1896c5aaf5d94a49b38b91d423327cf1.png" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>大数据学习之路</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>VMware</tag>
+      </tags>
   </entry>
   <entry>
     <title>北美自由贸易区</title>
@@ -229,37 +260,18 @@
       </tags>
   </entry>
   <entry>
-    <title>分布式与集群，操作系统，Linux，VMware等常识</title>
-    <url>/2022/10/25/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E9%9B%86%E7%BE%A4%EF%BC%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%8CLinux%EF%BC%8CVMware%E7%AD%89%E5%B8%B8%E8%AF%86/</url>
+    <title>发票</title>
+    <url>/2022/10/17/%E5%8F%91%E7%A5%A8/</url>
     <content><![CDATA[ <span id="more"></span>
 
-<h2 id="分布式与集群"><a href="#分布式与集群" class="headerlink" title="分布式与集群"></a>分布式与集群</h2><p><img src="https://img-blog.csdnimg.cn/8a465fe5081c46d9905c4634463b03ff.png" alt="分布式与集群"><br>分布式储存解决大数据量太大的问题，这台机器放一点那台机器放一点<br>分布式计算解决单个计算机计算能力有瓶颈，需要高效计算的问题 </p>
-<h2 id="操作系统及其分类"><a href="#操作系统及其分类" class="headerlink" title="操作系统及其分类"></a>操作系统及其分类</h2><p><img src="https://img-blog.csdnimg.cn/d7e4787ad47147c190df8a5f8af3bd35.png" alt="在这里插入图片描述"><br>操作系统可以分成四类<br><img src="https://img-blog.csdnimg.cn/0d8f1c2f2d3a4a31afaa41611380c39e.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/98875643a9c44d0aae501dd09ca2dc69.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/9ba750bca38b485d806eed2f64983ff5.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/b379ee462a6f4c608fb29a5128f48dec.png" alt="在这里插入图片描述"></p>
-<h2 id="Linux的起源与发展"><a href="#Linux的起源与发展" class="headerlink" title="Linux的起源与发展"></a>Linux的起源与发展</h2><p><img src="https://img-blog.csdnimg.cn/6ecf8071f558456190cd79c1d61be48b.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/f5e57703611c492aa7dac6e3bb4064f7.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/913a5561618c4c95b84ccc935013ddc5.png" alt="在这里插入图片描述"></p>
-<h2 id="VMware虚拟机概念及安装"><a href="#VMware虚拟机概念及安装" class="headerlink" title="VMware虚拟机概念及安装"></a>VMware虚拟机概念及安装</h2><p><img src="https://img-blog.csdnimg.cn/086381d3ac554d7483d5bd42e54f55ef.png" alt="在这里插入图片描述"><br>上面第一个是服务器，配置特别好，第二个是交换机，和服务器连上网线就是局域网<br><img src="https://img-blog.csdnimg.cn/d3c14a9c559d448aa882efca21ddedbd.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/126ed93fd3bb44fba9e330b0a687be4c.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/1896c5aaf5d94a49b38b91d423327cf1.png" alt="在这里插入图片描述"></p>
+<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>发票是指一切单位和个人在购销商品、提供或接受服务以及从事其他经营活动中，所开具和收取的业务凭证，是会计核算的原始依据，也是审计机关、税务机关执法检查的重要依据。收据才是收付款凭证，发票只能证明业务发生了，不能证明款项是否收付。<br><strong>简单来说，发票就是发生的成本、费用或收入的原始凭证。对于公司来讲，发票主要是公司做账的依据，同时也是缴税的费用凭证；而对于员工来讲，发票主要是用来报销的。</strong><br>现在，有权征收税费的机关有财政、税务局、海关及相关行业部门，财政及相关行业主管部门都用行政专用收款收据。国税、地税都归国家税务总局统一管理，海关由海关总署垂直管理。国、地税负责工商税收的征收，工商税收基本上包括了对从事工商业经营的企业和居民个人征收的各种税收，我国绝大部分税种都属于工商税收。海关负责关税征收，包括进出口关税和船舶关税。</p>
+<h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><p><strong>普通发票：</strong>主要由营业税纳税人和增值税小规模纳税人使用，增值税一般纳税人在不能开具专用发票的情况下也可使用普通发票。普通发票由行业发票和专用发票组成。前者适用于某个行业和经营业务，如商业零售统一发票、商业批发统一发票、工业企业产品销售统一发票等；后者仅适用于某一经营项目，如广告费用结算发票，商品房销售发票等。<br><strong>增值税专用发票</strong>是我国实施新税制的产物，是国家税务部门根据增值税征收管理需要而设定的，专用于纳税人销售或者提供增值税应税项目的一种发票。</p>
 ]]></content>
       <categories>
-        <category>大数据学习之路</category>
+        <category>一堆杂乱的常识</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>VMware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建之路</title>
-    <url>/2022/10/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF/</url>
-    <content><![CDATA[<p>这篇文用来记录博客搭建中的一些问题。<br><em>博客搭建真的蛮有意思</em></p>
- <span id="more"></span>
-
-<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p><a href="https://blog.csdn.net/lijing742180/article/details/87970909?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166582836216781432916883%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166582836216781432916883&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-87970909-null-null.142%5Ev56%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=next%E4%B8%BB%E9%A2%98%E6%90%9C%E7%B4%A2&spm=1018.2226.3001.4187">参考链接</a><br>注意，path要选择正确的图标位置。我的path配置为 path: search.xml。</p>
-<h2 id="本地图片的插入"><a href="#本地图片的插入" class="headerlink" title="本地图片的插入"></a>本地图片的插入</h2><p>由于博客只能插入一些网页图片，所以需要先把图片转化为网址。可以使用<a href="https://sm.ms/">SM.MS</a>进行转换（记得挂vpn哦）。</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
+        <tag>商业</tag>
       </tags>
   </entry>
   <entry>
@@ -276,18 +288,19 @@
       </tags>
   </entry>
   <entry>
-    <title>发票</title>
-    <url>/2022/10/17/%E5%8F%91%E7%A5%A8/</url>
-    <content><![CDATA[ <span id="more"></span>
+    <title>博客搭建之路</title>
+    <url>/2022/10/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF/</url>
+    <content><![CDATA[<p>这篇文用来记录博客搭建中的一些问题。<br><em>博客搭建真的蛮有意思</em></p>
+ <span id="more"></span>
 
-<h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>发票是指一切单位和个人在购销商品、提供或接受服务以及从事其他经营活动中，所开具和收取的业务凭证，是会计核算的原始依据，也是审计机关、税务机关执法检查的重要依据。收据才是收付款凭证，发票只能证明业务发生了，不能证明款项是否收付。<br><strong>简单来说，发票就是发生的成本、费用或收入的原始凭证。对于公司来讲，发票主要是公司做账的依据，同时也是缴税的费用凭证；而对于员工来讲，发票主要是用来报销的。</strong><br>现在，有权征收税费的机关有财政、税务局、海关及相关行业部门，财政及相关行业主管部门都用行政专用收款收据。国税、地税都归国家税务总局统一管理，海关由海关总署垂直管理。国、地税负责工商税收的征收，工商税收基本上包括了对从事工商业经营的企业和居民个人征收的各种税收，我国绝大部分税种都属于工商税收。海关负责关税征收，包括进出口关税和船舶关税。</p>
-<h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><p><strong>普通发票：</strong>主要由营业税纳税人和增值税小规模纳税人使用，增值税一般纳税人在不能开具专用发票的情况下也可使用普通发票。普通发票由行业发票和专用发票组成。前者适用于某个行业和经营业务，如商业零售统一发票、商业批发统一发票、工业企业产品销售统一发票等；后者仅适用于某一经营项目，如广告费用结算发票，商品房销售发票等。<br><strong>增值税专用发票</strong>是我国实施新税制的产物，是国家税务部门根据增值税征收管理需要而设定的，专用于纳税人销售或者提供增值税应税项目的一种发票。</p>
+<h2 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h2><p><a href="https://blog.csdn.net/lijing742180/article/details/87970909?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166582836216781432916883%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166582836216781432916883&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-87970909-null-null.142%5Ev56%5Epc_rank_34_queryrelevant25,201%5Ev3%5Econtrol_1&utm_term=next%E4%B8%BB%E9%A2%98%E6%90%9C%E7%B4%A2&spm=1018.2226.3001.4187">参考链接</a><br>注意，path要选择正确的图标位置。我的path配置为 path: search.xml。</p>
+<h2 id="本地图片的插入"><a href="#本地图片的插入" class="headerlink" title="本地图片的插入"></a>本地图片的插入</h2><p>由于博客只能插入一些网页图片，所以需要先把图片转化为网址。可以使用<a href="https://sm.ms/">SM.MS</a>进行转换（记得挂vpn哦）。</p>
 ]]></content>
       <categories>
-        <category>一堆杂乱的常识</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>商业</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -354,7 +367,7 @@
       </tags>
   </entry>
   <entry>
-    <title>丝状病毒（埃博拉病毒，马尔堡病毒）</title>
+    <title>字符集与编码</title>
     <url>/2022/11/08/%E5%AD%97%E7%AC%A6%E9%9B%86%E4%B8%8E%E7%BC%96%E7%A0%81/</url>
     <content><![CDATA[<p>字符集是多个字符的集合，可以理解为二进制数，与字符的映射关系，唯一的一个编号就代表一个字。<br>字符编码是计算机中对字符的表示方式。<br>字符集与字符编码可以这样区分：<br>1.字符集是书写系统字母与符号的集合。<br>2.字符编码则是将字符映射为一特定的字节或字节序列，是一种规则。<br> <span id="more"></span></p>
 <h2 id="ASCLL码"><a href="#ASCLL码" class="headerlink" title="ASCLL码"></a>ASCLL码</h2><p>这是美国在19世纪60年代的时候为了建立英文字符和二进制的关系时制定的编码规范，它能表示128个字符，其中包括英文字符、阿拉伯数字、西文字符以及32个控制字符。它用一个字节来表示具体的字符，但它只用后7位来表示字符（2^7&#x3D;128），最前面的一位统一规定为0。</p>
@@ -445,33 +458,6 @@
       </tags>
   </entry>
   <entry>
-    <title>电位器</title>
-    <url>/2022/11/02/%E7%94%B5%E4%BD%8D%E5%99%A8/</url>
-    <content><![CDATA[<p>电位器是具有三个引出端、阻值可按某种变化规律调节的电阻元件。电位器通常由电阻体和可移动的电刷组成。当电刷沿电阻体移动时，在输出端即获得与位移量成一定关系的电阻值或电压。<br>电位器既可作三端元件使用也可作二端元件使用。后者可视作一可变电阻器，由于它在电路中的作用是获得与输入电压（外加电压）成一定关系的输出电压，因此称之为电位器。</p>
-]]></content>
-      <categories>
-        <category>单片机学习之路</category>
-      </categories>
-      <tags>
-        <tag>单片机</tag>
-        <tag>电子元件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>红警</title>
-    <url>/2022/11/02/%E7%BA%A2%E8%AD%A6/</url>
-    <content><![CDATA[<p>二战时,苏联与盟军的对抗,红色指一级,警戒指盟军的入侵,苏联做好了准备! 红色泛指苏联等国家，而红色警戒的背景是2战期间，指的是西方盟国与苏联国家的PK红色警戒，英文名称Red Alert，又译“红色警报”，是美国艺电游戏公司（EA，Electronic Arts）为个人电脑（PC）推出的一系列即时战略游戏，玩家通常简称为红警或RA。</p>
-<p>《命令与征服：红色警戒》是一款即时战略游戏，搭配高清画面和优秀的即时战略方式，透过多人模式体验实时策略的命令与征服。3种不同难度等级的遭遇战给你全新手游体验。提供了遭遇战模式，选择三种不同难度等级，从简单到困难，享受一个符合你即时策略经验的挑战。用触摸屏的力量夺取胜利，用拖拽和滚动来审视战场。用捏夹进行缩放。用轻按选择并移动单位。一次性控制多个单位也不是问题。为苏联的统治而战，还是为盟军的和平而战。任意一方都有特别的作战计划，并且会在不同的故事情节中参战。征召经典单位（例如基洛夫飞艇）和新单位（例如圣武士坦克），或使用R&amp;D新科技粉碎你的敌人。</p>
-<p>红警这款游戏原本是黑苏联的，黑他们科技落后，使用了大量的辐射工兵，自爆卡车，恐怖分子，尤里等非人道主义单位，盟军是象征科技的超时空步兵等。但是由于没设计好，搞得游戏中苏军装备物美价廉，盟军华而不实一碰就碎，故吸引了许多精苏的粉丝。</p>
-]]></content>
-      <categories>
-        <category>一堆杂乱的常识</category>
-      </categories>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>科技公司巨头盘点</title>
     <url>/2022/10/25/%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%E5%B7%A8%E5%A4%B4%E7%9B%98%E7%82%B9/</url>
     <content><![CDATA[ <span id="more"></span>
@@ -496,6 +482,33 @@
       <tags>
         <tag>商业</tag>
         <tag>科技</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电位器</title>
+    <url>/2022/11/02/%E7%94%B5%E4%BD%8D%E5%99%A8/</url>
+    <content><![CDATA[<p>电位器是具有三个引出端、阻值可按某种变化规律调节的电阻元件。电位器通常由电阻体和可移动的电刷组成。当电刷沿电阻体移动时，在输出端即获得与位移量成一定关系的电阻值或电压。<br>电位器既可作三端元件使用也可作二端元件使用。后者可视作一可变电阻器，由于它在电路中的作用是获得与输入电压（外加电压）成一定关系的输出电压，因此称之为电位器。</p>
+]]></content>
+      <categories>
+        <category>单片机学习之路</category>
+      </categories>
+      <tags>
+        <tag>单片机</tag>
+        <tag>电子元件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>红警</title>
+    <url>/2022/11/02/%E7%BA%A2%E8%AD%A6/</url>
+    <content><![CDATA[<p>二战时,苏联与盟军的对抗,红色指一级,警戒指盟军的入侵,苏联做好了准备! 红色泛指苏联等国家，而红色警戒的背景是2战期间，指的是西方盟国与苏联国家的PK红色警戒，英文名称Red Alert，又译“红色警报”，是美国艺电游戏公司（EA，Electronic Arts）为个人电脑（PC）推出的一系列即时战略游戏，玩家通常简称为红警或RA。</p>
+<p>《命令与征服：红色警戒》是一款即时战略游戏，搭配高清画面和优秀的即时战略方式，透过多人模式体验实时策略的命令与征服。3种不同难度等级的遭遇战给你全新手游体验。提供了遭遇战模式，选择三种不同难度等级，从简单到困难，享受一个符合你即时策略经验的挑战。用触摸屏的力量夺取胜利，用拖拽和滚动来审视战场。用捏夹进行缩放。用轻按选择并移动单位。一次性控制多个单位也不是问题。为苏联的统治而战，还是为盟军的和平而战。任意一方都有特别的作战计划，并且会在不同的故事情节中参战。征召经典单位（例如基洛夫飞艇）和新单位（例如圣武士坦克），或使用R&amp;D新科技粉碎你的敌人。</p>
+<p>红警这款游戏原本是黑苏联的，黑他们科技落后，使用了大量的辐射工兵，自爆卡车，恐怖分子，尤里等非人道主义单位，盟军是象征科技的超时空步兵等。但是由于没设计好，搞得游戏中苏军装备物美价廉，盟军华而不实一碰就碎，故吸引了许多精苏的粉丝。</p>
+]]></content>
+      <categories>
+        <category>一堆杂乱的常识</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
       </tags>
   </entry>
   <entry>
@@ -540,23 +553,6 @@
       </tags>
   </entry>
   <entry>
-    <title>身份证号的数字含义</title>
-    <url>/2022/10/30/%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%9A%84%E6%95%B0%E5%AD%97%E6%84%8F%E4%B9%89/</url>
-    <content><![CDATA[<p>倒数第二位区分性别，单数是男生双数是女生<br>前两位数是省份信息，13便是河北45是广西43是湖南</p>
-]]></content>
-      <categories>
-        <category>一堆杂乱的常识</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/10/27/%E8%85%BF%E9%BA%BB/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>赫尔墨斯与潘</title>
     <url>/2022/10/17/%E8%B5%AB%E5%B0%94%E5%A2%A8%E6%96%AF%E5%92%8C%E6%BD%98/</url>
     <content><![CDATA[<span id="more"></span>
@@ -579,6 +575,23 @@
       </tags>
   </entry>
   <entry>
+    <title>身份证号的数字含义</title>
+    <url>/2022/10/30/%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7%E7%9A%84%E6%95%B0%E5%AD%97%E6%84%8F%E4%B9%89/</url>
+    <content><![CDATA[<p>倒数第二位区分性别，单数是男生双数是女生<br>前两位数是省份信息，13便是河北45是广西43是湖南</p>
+]]></content>
+      <categories>
+        <category>一堆杂乱的常识</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/27/%E8%85%BF%E9%BA%BB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>那些称作首席的公司职位</title>
     <url>/2022/10/27/%E9%82%A3%E4%BA%9B%E7%A7%B0%E4%BD%9C%E9%A6%96%E5%B8%AD%E7%9A%84%E5%85%AC%E5%8F%B8%E8%81%8C%E4%BD%8D/</url>
     <content><![CDATA[ <span id="more"></span>
@@ -593,16 +606,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/10/28/%E9%A9%AC%E6%96%AF%E5%85%8B/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/10/30/%E8%B5%B5%E4%B9%9D%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>里拉斜塔不倒之奥秘</title>
     <url>/2022/10/29/%E9%87%8C%E6%8B%89%E6%96%9C%E5%A1%94%E4%B8%8D%E5%80%92%E4%B9%8B%E5%A5%A5%E7%A7%98/</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/2ae654d1bc8f4ea2ba00dcbb429050bd.png" alt="在这里插入图片描述">第n块木板可以生出长度为L&#x2F;2n，n层可以生出的最大长度为L&#x2F;2 + L&#x2F;4 + ……+ L&#x2F;2n，为调和级数。<br>由于调和级数不收敛，所以木板可以生出无限长。</p>
@@ -613,5 +616,15 @@
       <tags>
         <tag>数学</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/30/%E8%B5%B5%E4%B9%9D%E7%AB%A0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/10/28/%E9%A9%AC%E6%96%AF%E5%85%8B/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
